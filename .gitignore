@@ -37,3 +37,6 @@ main
 .vscode
 cmake-build-*
 
+main.dSYM
+
+

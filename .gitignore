@@ -40,3 +40,5 @@ cmake-build-*
 main.dSYM
 
 
+## any directory named build
+build

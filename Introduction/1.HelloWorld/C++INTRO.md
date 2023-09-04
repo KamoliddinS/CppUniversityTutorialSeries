@@ -33,7 +33,7 @@ int main() {
 
 ## 5. Compiling and Running the Program
 
-### please refer to the [link](./README.md) for the full instructions
+### please refer to the [link](./HOWTO.md) for the full instructions
 
 ## 6. Important Points to Remember
 

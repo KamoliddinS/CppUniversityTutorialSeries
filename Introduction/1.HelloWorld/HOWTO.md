@@ -79,6 +79,24 @@ If you're using the `CMakeLists.txt` to generate build files:
    ./helloworld
    ```
 
+### Using Just the Compiler:
+
+1. Open a terminal or command prompt.
+2. Navigate to the project directory:
+   ```bash
+   cd src
+   ```
+3. Compile the source code:
+   ```bash
+   g++ -o helloworld main.cpp
+   ```
+
+4. Once compiled, you can run the generated executable:
+   ```bash
+   ./helloworld
+   ```
+
+
 ## Conclusion
 
 This project serves as a starting point for understanding the basics of C++ programming. The provided build steps guide you through compiling and running the program. As you progress in the course, you'll explore more advanced concepts and build upon this foundation. Happy coding!

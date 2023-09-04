@@ -11,6 +11,6 @@ set(CMAKE_CXX_STANDARD 17)
 # This line sets the C++ standard for the project to C++17. This means that the compiler will use the C++17 standard when compiling the project's source files. 
 # If the compiler doesn't support C++17, the configuration process will fail.
 
-add_executable(HelloWorld main.cpp)
+add_executable(helloworld main.cpp)
 # This line tells CMake to create an executable target named "HelloWorl" from the source file main.cpp. 
 # When the project is built, this will produce an executable file named "HelloWorl" (or "HelloWorl.exe" on Windows) from the main.cpp source file.

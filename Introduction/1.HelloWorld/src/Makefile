@@ -1,7 +1,7 @@
 # Variables
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall
-TARGET = HelloWorld
+TARGET = helloworld
 SOURCES = main.cpp
 
 # Default rule

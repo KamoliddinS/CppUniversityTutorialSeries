@@ -2,6 +2,53 @@
 # Structure of a C++ Program
 
 Welcome to the guide on the structure of a C++ program. This document provides an overview of the fundamental components and organization of a typical C++ program.
+## 
+1. [**CPP keywords**](https://en.cppreference.com/w/cpp/keyword)
+This is a list of reserved keywords in C++. Since they are used by the language, these keywords are not available for re-definition or overloading.
+
+2. **Idetifiers**: These are names given to entities such as variables, functions, classes, etc. They must follow certain rules and conventions.
+
+   ```cpp
+   int myVariable;
+
+    void displayMessage() {
+         // code
+    }
+   ```
+3. **Statements**: These are instructions that perform a specific task. They must end with a semicolon. A statement is a single line of code that does something. Or small piece of code that does something.
+
+   ```cpp
+    std::cout << "Hello, C++!";
+
+    int myVariable = 10;
+
+    if (myVariable > 5) { //this is expression
+        // code
+    }
+
+    return 0;
+
+    ```
+3. **Expressions**: These are combinations of operators, constants, and variables that produce a value.
+
+   ```cpp
+    2 + 3;
+
+    myVariable + 5;
+
+    myVariable > 5;
+    ```
+4. **Punctuators**: These are symbols that are used to separate or combine expressions. Examples include brackets, commas, colons, and more.
+
+   ```cpp
+    int myVariable = 10;
+
+    if (myVariable > 5) {
+        // code
+    }
+    ```
+
+
 
 ## Basic Structure
 

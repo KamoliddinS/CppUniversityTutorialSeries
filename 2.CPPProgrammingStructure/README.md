@@ -21,4 +21,6 @@ Welcome to the C++ programming Structure and Fundametal types guide! This README
 
 If you're feeling overwhelmed, that's okay! Start with the first topic and take your time. Programming is a skill, and like any other skill, it requires practice and patience. As you progress through each topic, try to write small programs to test your understanding. And always remember, every programmer was once a beginner.
 
-Happy coding!
+<!-- quote -->
+
+> "The only way to learn a new programming language is by writing programs in it." - Dennis Ritchie

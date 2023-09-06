@@ -1,7 +1,7 @@
 
 # C++ Project Guide
 
-Welcome to the C++ Project Guide. This document provides a brief overview of various aspects of C++ development, from setting up and running your project to understanding different types of errors you might encounter.
+Welcome to the C++ Project Guide. This document provides a brief overview of various aspects of C++ development, from setting up and running your project to understanding different types of errors you could face.
 
 ## 1. Project Setup and Naming Conventions
 - **Setting Up a development environment**: To get started with C++ development, you'll need to set up a development environment. For a detailed guide, see [Setting Up a Development Environment](./SETUP.md).

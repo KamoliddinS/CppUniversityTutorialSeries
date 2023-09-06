@@ -81,6 +81,10 @@ If you're using the `CMakeLists.txt` to generate build files:
 
 ### Using Just the Compiler:
 
+If you're using just the compiler to build the project:
+
+
+
 1. Open a terminal or command prompt.
 2. Navigate to the project directory:
    ```bash
@@ -95,6 +99,8 @@ If you're using the `CMakeLists.txt` to generate build files:
    ```bash
    ./helloworld
    ```
+
+g++ command is a GNU c++ compiler invocation command, which is used for preprocessing, compilation, assembly and linking of source code to generate an executable file.
 
 
 ## Conclusion

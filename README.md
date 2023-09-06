@@ -17,11 +17,11 @@ C++ Course Repository
 │   │   └── COMPILER_ERRORS_WARNING.md
 │   └── ...
 │
-├── Lesson2/
-│   ├── Topic1/
-│   │   └── topic1.md
-│   ├── Topic2/
-│   │   └── topic2.md
+├── CPPProgrammingStructure/
+│   ├── 1.CPPProgrammingStructre/
+│   │   └── OVERVIEW.md
+│   ├── 2.IncludePreprocessorDirective/
+│   │   └── INCLUDE_DIRECTIVE.md
 │   └── ...
 │
 └── ...
@@ -33,7 +33,7 @@ To begin with the course, follow these steps:
 
 1. **Clone the Repository**: 
    ```bash
-   git clone [repository_url]
+   git clone https://github.com/KamoliddinS/CppUniversityTutorialSeries.git
    ```
 
 2. **Navigate to a Lesson**:
@@ -43,7 +43,7 @@ To begin with the course, follow these steps:
 
    For example, to navigate to the first lesson:
    ```bash
-   cd Introduction
+   cd 1.Introduction
    ```
 
 3. **Access Topics**:
@@ -52,17 +52,24 @@ To begin with the course, follow these steps:
    For example, to access the first topic of the first lesson:
    ```bash
    cd 1.HelloWorld
-   cat C++INTRO.md
+   code . # or open the directory in your preferred editor
    ```
 
 ## Course Lessons
 
 Here's a brief overview of the lessons and the topics they cover:
 
-- **Introduction**: This lesson provides a basic understanding of C++ programming. It covers topics like setting up a development environment, naming conventions, and running the code.
+- **[Introduction](./1.Introduction/README.md)**: This lesson provides a basic understanding of C++ programming. It covers topics like setting up a development environment, naming conventions, and running the code.
 
-(Continue listing other lessons and their topics as needed)
 
-## Conclusion
+- **[CPP Programming Structure](./2.CPPProgrammingStructure/README.md)**: This lesson covers the fundamental components of a C++ program, such as the `#include` directive, `main()` function,namespaces as well as fundamental types ( to help you stay in sync with tutorials in the lab). 
 
-This course aims to provide a structured and in-depth understanding of C++ programming. By following along with the lessons and topics, you'll gain both theoretical knowledge and practical experience. Happy learning!
+(To stay updated on the latest lessons and topics, git pull the repository regularly.)
+
+## Note
+
+This course aims to provide a structured and in-depth understanding of C++ programming. By following along with the lessons and topics, you'll gain both theoretical knowledge and practical experience.
+
+
+> "Experience is the teacher of all things." - Julius Caesar
+

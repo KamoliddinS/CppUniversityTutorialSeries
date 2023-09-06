@@ -5,22 +5,26 @@ Welcome to the comprehensive C++ course designed to take you through the intrica
 
 ## Course Structure
 
-The course is organized into separate directories, with each directory representing a lesson. Inside each lesson directory, you'll find subdirectories for various topics covered in that lesson. Each topic has its own `[topicname].md` file that delves into the details of that particular topic.
+The course is organized into separate directories, with each directory representing a lesson. Inside each lesson directory, you'll find subdirectories for various topics covered in that lesson. Each topic has its own `[topicname].md` file that delves into the details of that particular topic and src folder that contains the source code for the topic.
 
 ```
 C++ Course Repository
 │
 ├── Introduction/
 │   ├── 1.HelloWorld/
+│   │   └── src/
 │   │   └── C++INTRO.md
 │   ├── 2.CompilerErrorWarnings/
+│   │   └── src/
 │   │   └── COMPILER_ERRORS_WARNING.md
 │   └── ...
 │
 ├── CPPProgrammingStructure/
 │   ├── 1.CPPProgrammingStructre/
+│   │   └── src/
 │   │   └── OVERVIEW.md
 │   ├── 2.IncludePreprocessorDirective/
+│   │   └── src/
 │   │   └── INCLUDE_DIRECTIVE.md
 │   └── ...
 │

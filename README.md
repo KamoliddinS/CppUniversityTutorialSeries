@@ -1,7 +1,7 @@
 
 # C++ Course Overview
 
-Welcome to the comprehensive C++ course designed to take you through the intricacies of the C++ programming language. This course is structured into individual lessons, each focusing on specific topics to provide a thorough understanding of C++.
+Welcome to the comprehensive Computer Programming with  C++ course designed to take you through the intricacies of the C++ programming language. This course is structured into individual lessons, each focusing on specific topics to provide a thorough understanding of C++.
 
 ## Course Structure
 
@@ -10,7 +10,7 @@ The course is organized into separate directories, with each directory represent
 ```
 C++ Course Repository
 │
-├── Introduction/
+├── 1.Introduction/
 │   ├── 1.HelloWorld/
 │   │   └── src/
 │   │   └── C++INTRO.md
@@ -19,7 +19,7 @@ C++ Course Repository
 │   │   └── COMPILER_ERRORS_WARNING.md
 │   └── ...
 │
-├── CPPProgrammingStructure/
+├── 2.CPPProgrammingStructure/
 │   ├── 1.CPPProgrammingStructre/
 │   │   └── src/
 │   │   └── OVERVIEW.md

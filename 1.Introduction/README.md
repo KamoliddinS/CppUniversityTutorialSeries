@@ -1,5 +1,5 @@
 
-# C++ Project Guide
+# C++  Introduction Project Guide
 
 Welcome to the C++ Project Guide. This document provides a brief overview of various aspects of C++ development, from setting up and running your project to understanding different types of errors you could face.
 
@@ -8,7 +8,7 @@ Welcome to the C++ Project Guide. This document provides a brief overview of var
 
 - **CMakeLists and Makefile**: These are essential files for building and compiling your C++ project. They define how your source files are compiled, linked, and turned into executable programs. For a detailed guide, see [CMakeLists and Makefile Guide](./1.HelloWorld/C++INTRO.md).
   
-- **Naming Conventions**: Consistent naming conventions are crucial for code readability and maintainability. For an in-depth look at naming conventions in C++, check out our [Naming Conventions Guide](./1.HelloWorld/C++INTRO.md).
+- **Naming Conventions**: Consistent naming conventions are crucial for code readability and maintainability. For an in-depth look at naming conventions in C++, check out our [Naming Conventions Guide](./1.HelloWorld/C++INTRO.md?plain=1#L90).
 
 - **Running the Code**: To understand how to compile and run your C++ code, refer to the [Running the Code Guide](./1.HelloWorld/HOWTO.md).
 

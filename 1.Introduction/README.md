@@ -4,8 +4,8 @@
 Welcome to the C++ Project Guide. This document provides a brief overview of various aspects of C++ development, from setting up and running your project to understanding different types of errors you could face.
 
 ## 1. Project Setup and Naming Conventions
-- **Setting Up a development environment**: To get started with C++ development, you'll need to set up a development environment. For a detailed guide, see [Setting Up a Development Environment](./SETUP.md).
-
+- **Setting Up a development environment**: To get started with C++ development, you'll need to set up a development environment. For a detailed guide, see [Setting Up a Development Environment](./SETUP.md)
+- **GIT**: GIT is a version control system that allows you to track changes in your code. For a detailed guide, see [GIT](./GIT.md)
 - **Building and Compiling**: Under the hood, C++ is a compiled language. This means that your source code is converted into machine code before it's executed. For a detailed guide, see [Building and Compiling](./BUILDINGAC++PROGRAM.md).
 
 - **CMakeLists and Makefile**: These are essential files for building and compiling your C++ project. They define how your source files are compiled, linked, and turned into executable programs. For a detailed guide, see [CMakeLists and Makefile Guide](./1.HelloWorld/C++INTRO.md).

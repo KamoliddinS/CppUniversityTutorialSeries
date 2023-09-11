@@ -12,22 +12,23 @@ A number system is a way to represent numbers. We use different number systems i
 ### Decimal (Base 10):
 - **Used in**: Everyday counting
 - **Digits**: 0 to 9
-- **Example**: 159 is \(1 \times 10^2 + 5 \times 10^1 + 9 \times 10^0\)
+- **Example**: 159 is \(1 * 10<sup>2</sup> + 5 * 10<sup>1</sup> + 9 * 10<sup>0</sup>\)
 
+
+Your representation of the number 159 in decimal is correct!
 ### Binary (Base 2):
 - **Used in**: Computers at the basic level
 - **Digits**: 0 and 1
-- **Example**: 1011 is \(1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0\)
+- **Example**: 1011 is \(1 * 2<sup>3</sup> + 0 * 2<sup>2</sup> + 1 * 2<sup>1</sup> + 1 * 2<sup>0</sup>\)  is equal to 11 in decimal
 
 ### Octal (Base 8):
 - **Used in**: Some computer systems
 - **Digits**: 0 to 7
-- **Example**: 547 is \(5 \times 8^2 + 4 \times 8^1 + 7 \times 8^0\)
-
+- **Example**: 547 is \(5 * 8<sup>2</sup> + 4 * 8<sup>1</sup> + 7 * 8<sup>0</sup>\) is equal to 363 in decimal
 ### Hexadecimal (Base 16):
 - **Used in**: Representing binary numbers in a shorter form
 - **Digits**: 0 to 9 and A to F (A=10, B=11, ..., F=15)
-- **Example**: 2AF is \(2 \times 16^2 + 10 \times 16^1 + 15 \times 16^0\)
+- **Example**: 2AF is \(2 * 16<sup>2</sup> + 10 * 16<sup>1</sup> + 15 * 16<sup>0</sup>\) is equal to 687 in decimal
 
 ## 3. Why Different Number Systems?
 

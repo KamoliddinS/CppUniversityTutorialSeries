@@ -14,8 +14,6 @@ A number system is a way to represent numbers. We use different number systems i
 - **Digits**: 0 to 9
 - **Example**: 159 is \(1 * 10<sup>2</sup> + 5 * 10<sup>1</sup> + 9 * 10<sup>0</sup>\)
 
-
-Your representation of the number 159 in decimal is correct!
 ### Binary (Base 2):
 - **Used in**: Computers at the basic level
 - **Digits**: 0 and 1

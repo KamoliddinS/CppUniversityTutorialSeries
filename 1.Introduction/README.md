@@ -6,6 +6,8 @@ Welcome to the C++ Project Guide. This document provides a brief overview of var
 ## 1. Project Setup and Naming Conventions
 - **Setting Up a development environment**: To get started with C++ development, you'll need to set up a development environment. For a detailed guide, see [Setting Up a Development Environment](./SETUP.md).
 
+- **Building and Compiling**: Under the hood, C++ is a compiled language. This means that your source code is converted into machine code before it's executed. For a detailed guide, see [Building and Compiling](./BUILDINGAC++PROGRAM.md).
+
 - **CMakeLists and Makefile**: These are essential files for building and compiling your C++ project. They define how your source files are compiled, linked, and turned into executable programs. For a detailed guide, see [CMakeLists and Makefile Guide](./1.HelloWorld/C++INTRO.md).
   
 - **Naming Conventions**: Consistent naming conventions are crucial for code readability and maintainability. For an in-depth look at naming conventions in C++, check out our [Naming Conventions Guide](./1.HelloWorld/C++INTRO.md?plain=1#L90).

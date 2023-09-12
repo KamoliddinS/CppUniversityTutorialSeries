@@ -110,7 +110,7 @@ Maintaining a consistent naming convention is crucial for readability and mainta
 - **Classes and Structs:** Typically use Upper Camel Case.
   - Example: `MyClass`, `CarEngine`.
   
-- **Functions and Methods:** Can be either Upper Camel Case or snake_case.
+- **Functions and Methods:** Can be either Camel Case or snake_case.
   - Example: `doSomething()` or `do_something()`.
   
 - **Variables:** Typically use lower camel case or snake_case.

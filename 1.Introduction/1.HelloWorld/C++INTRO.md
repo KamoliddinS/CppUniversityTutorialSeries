@@ -111,7 +111,7 @@ Maintaining a consistent naming convention is crucial for readability and mainta
   - Example: `MyClass`, `CarEngine`.
   
 - **Functions and Methods:** Can be either Upper Camel Case or snake_case.
-  - Example: `DoSomething()` or `do_something()`.
+  - Example: `doSomething()` or `do_something()`.
   
 - **Variables:** Typically use lower camel case or snake_case.
   - Example: `localVariable` or `local_variable`.
@@ -141,4 +141,4 @@ Maintaining a consistent naming convention is crucial for readability and mainta
 3. **Limit Abbreviations:** Use full words unless the abbreviation is widely recognized.
 4. **Follow Project Guidelines:** If contributing to an existing project, adhere to its established conventions.
 
-By adhering to these conventions, we aim to keep our codebase clear, readable, and easy to maintain.
+By adhering to these conventions, we aim to keep our codebase clear, readable, and easy to maintain for others.

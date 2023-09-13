@@ -30,6 +30,9 @@ Welcome to the C++ Project Guide. This document provides a brief overview of var
 
 - **Logic Errors**: Even if your code compiles and runs without errors, it might not produce the expected output due to flaws in logic. Explore common logic errors and how to identify them in the [Logic Errors Guide](./5.LogicError/LOGIC_ERRORS.md).
 
+## 6. Why C++
+- **Why We Teach C++ Over Simpler Languages**: C++ is a powerful language that offers fine-grained control over memory management and performance. Learn more about the advantages of C++ in our [Why C++ Guide](./6.WhyC%2B%2B/WHYC%2B%2B.md).
+
 ## Conclusion
 
 This guide provides a starting point for understanding the different aspects of C++ development. By diving into each linked document, you can gain a deeper understanding of each topic. Happy coding!

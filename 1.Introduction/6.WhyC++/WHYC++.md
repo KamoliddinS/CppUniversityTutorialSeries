@@ -68,10 +68,15 @@ One of the beautiful things about programming is that you don't always have to c
    result = lib.your_function_name(your_argument)
    ```
 ### Example
-to create the sample shared library you can use the following command:
+to execute the sample shared library you can use the following command:
 ```bash
 make libfibonacci.so
 ```
+> Note: you can use the following command to generate the shared library:
+> ```bash
+> g++ -o2 -fPIC -shared -o libfibonacci.so fibonacci.cpp
+> ```
+
 then you can run the code by using the following command:
 ```bash
 time python3 fibonacci_on_steroids.py

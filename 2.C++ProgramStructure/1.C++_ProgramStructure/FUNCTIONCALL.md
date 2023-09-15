@@ -31,7 +31,7 @@ display();  // Here, display() is a statement.
 
 In this scenario, the `display()` function call doesn't give us a value; it just prints "Hello!" on the screen. So, it's a statement.
 
-## 🤔 Conclusion
+## 🤔 Conclusion 
 
 In C++, a function call can be both an expression and a statement, depending on how it's used. If we care about the value it returns, it's an expression. If we just want it to do something without using its return value, it's a statement.
 

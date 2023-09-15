@@ -1,55 +1,48 @@
+# C++ Runtime Errors
 
-# Logic Errors in C++
+## What is a Runtime Error?
 
-Logic errors, often referred to as "bugs," occur when a program doesn't perform as intended, even though it may compile and run without any errors. These errors are due to flaws in the program's logic rather than syntax or runtime conditions.
+A runtime error is a mistake that happens when your C++ program is running. It means your program stops suddenly because of this mistake.
 
-## Understanding Logic Errors
+## Common C++ Runtime Errors
 
-A program with a logic error might produce unexpected results, but it doesn't crash or produce runtime errors. The issue lies in the programmer's understanding or implementation of the intended algorithm or behavior.
-
-### Common Logic Errors:
-
-1. **Off-by-One Errors:** These are among the most common logic errors. They occur when a loop iterates one time too many or one time too few.
-
-   Example:
+1. **Division by Zero**: When you try to divide a number by zero.
    ```cpp
-   for (int i = 0; i <= 10; i++) {  // This loop runs 11 times, not 10
-       // ...
-   }
-   ```
+   int a = 5;
+   int b = 0;
+   int result = a / b; // This will cause a runtime error.
 
-2. **Incorrect Conditionals:** Using the wrong relational operator in a conditional statement.
+2. **Null Pointer Access**: When you try to use a pointer that doesn't point to anything.
 
-   Example:
-   ```cpp
-   if (x = 10) {  // This is an assignment, not a comparison
-       // ...
-   }
-   ```
+    ```cpp
+    int* ptr = nullptr;
+    *ptr = 10; // This will cause a runtime error.
+    ```
+3. **Array Out of Bounds**: When you try to access an element in an array that doesn't exist.
 
-3. **Failing to Initialize Variables:** Using a variable before giving it a value can lead to unpredictable results.
+```cpp
+int arr[5];
+arr[10] = 100; // This will cause a runtime error.
+```
 
-4. **Misunderstanding Function Returns:** Assuming a function returns a value when it doesn't, or misinterpreting the value it returns.
+4. **Bad Memory Access**: When you try to access memory that your program shouldn't.
+    
+    ```cpp  
+    int* ptr = new int[5];
+    delete[] ptr;
+    ptr[3] = 50;// This will cause a runtime error because ptr was deleted.
+    ``` 
 
-5. **Incorrect Assumptions:** Making incorrect assumptions about the input, the state of variables, or the behavior of functions.
 
-6. **Failing to Handle All Cases:** For example, in a switch statement, not having a default case or missing cases can lead to logic errors.
+## How to Fix Runtime Errors?
 
-## Identifying and Resolving Logic Errors:
+1. **Read the Error Message**: The computer will give a message when there's a runtime error. This message can help you find where the mistake is.
 
-1. **Thorough Testing:** Test your program with a variety of inputs to ensure it behaves as expected in all scenarios.
+2. **Check Your Code**: Look at the part of your code where the error happened. Think about what your code is doing and if it makes sense.
 
-2. **Code Review:** Having another set of eyes review your code can help identify areas where the logic might be flawed.
+3. **Ask for Help**: If you can't find the mistake, ask a friend or teacher. Sometimes, another person can see something you missed.
 
-3. **Use Debuggers:** Step through your code with a debugger to understand its flow and identify where it might be deviating from the expected behavior.
+4. **Test Your Code**: After you think you've fixed the error, run your program again to see if it works.
 
-4. **Print Statements:** Temporarily insert print statements in your code to display the values of variables or the flow of execution. This can help pinpoint where the logic might be going awry.
-
-5. **Break Down Complex Logic:** If a piece of logic is complex, break it down into smaller parts or functions. This makes it easier to understand and debug.
-
-6. **Assertions:** Use assertions to check that certain conditions hold true at specific points in your program. If the condition is false, the program will alert you, helping identify logic errors.
-
-## Conclusion
-
-Logic errors can be elusive, as they don't manifest as explicit errors during compilation or runtime. However, with careful analysis, testing, and debugging, they can be identified and corrected. Always strive to understand your code's logic thoroughly and validate its behavior under various conditions.
+###### For further reading please visit: [geeksforgeeks.com](https://www.geeksforgeeks.org/reason-of-runtime-error-in-c-c/)
 

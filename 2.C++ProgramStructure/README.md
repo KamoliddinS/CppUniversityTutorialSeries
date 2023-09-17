@@ -17,9 +17,11 @@ Welcome to the C++ programming Structure and Fundametal types guide! This README
 
 6. **Basic Input and Output**: Interacting with users is a core part of programming. Learn how to take input from users and display output using `cin` and `cout`. [Discover more here](./6.BasicInputAndOutput/BASICINPUTANDOUTPU.md).
 
-## Getting Started
+## Conclusion
 
 If you're feeling overwhelmed, that's okay! Start with the first topic and take your time. Programming is a skill, and like any other skill, it requires practice and patience. As you progress through each topic, try to write small programs to test your understanding. And always remember, every programmer was once a beginner.
+
+
 
 <!-- quote -->
 

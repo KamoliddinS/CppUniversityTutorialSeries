@@ -1,8 +1,8 @@
 // Include guard to prevent multiple inclusions
-#ifndef MYHEADER_H
-#define MYHEADER_H
+#ifndef GREETING_H
+#define GREETING_H
 
 // A simple function declaration
 void greet();
 
-#endif // MYHEADER_H
+#endif // GREETING_H

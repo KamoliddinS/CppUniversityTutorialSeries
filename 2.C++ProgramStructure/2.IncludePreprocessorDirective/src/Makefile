@@ -2,7 +2,7 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall
 TARGET = include_preprocessor
-SOURCES = main.cpp
+SOURCES = main.cpp greeting.cpp
 
 # Default rule
 all: $(TARGET)

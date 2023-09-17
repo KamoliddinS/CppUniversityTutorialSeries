@@ -1,53 +1,31 @@
-
-// Including necessary headers
 #include <iostream>
 
-// Global variable declaration
-int globalVariable = 10;
-
-// Class definition
-class MyClass {
-    int data;
-public:
-    void setData(int d) {
-        data = d;
-    }
-
-    int getData() {
-        return data;
-    }
-};
-
-// Function definition
-void displayMessage() {
-    std::cout << "Hello, C++!" << std::endl;
-}
-
-// Main function - the entry point of the program
 int main() {
-    // Local variable declaration
-    int localVariable = 5;
+    // Introduction
+    std::cout << "C++ Statements and Expressions\n";
+    std::cout << "==============================\n\n";
 
-    // Using the global variable
-    std::cout << "Global Variable: " << globalVariable << std::endl;
+    // Expression: It evaluates to a value and does not necessarily cause any side effect.
+    int x = 5;  // '5' is an expression that evaluates to the value 5.
+    int y = x + 3;  // 'x + 3' is an expression that evaluates to the value 8.
 
-    // Using the local variable
-    std::cout << "Local Variable: " << localVariable << std::endl;
+    std::cout << "Expressions:\n";
+    std::cout << "x = " << x << "\n";  // '<<' is an operator, and the whole is an expression.
+    std::cout << "y = x + 3 = " << y << "\n\n";
 
-    // Calling the function
-    displayMessage();
-
-    // Using the class
-    MyClass obj;
-    obj.setData(20);
-    std::cout << "Class Data: " << obj.getData() << std::endl;
-
-    // Control structure example
-    if (localVariable < globalVariable) {
-        std::cout << "Local variable is less than global variable." << std::endl;
+    // Statement: It performs an action and typically consists of an expression followed by a semicolon.
+    x = 10;  // This is a statement. It assigns the value 10 to x.
+    if (y > x) {  // This is a statement. It's an if statement that checks a condition.
+        std::cout << "y is greater than x.\n";  // This is also a statement.
     } else {
-        std::cout << "Local variable is greater than or equal to global variable." << std::endl;
+        std::cout << "y is not greater than x.\n";  // This is also a statement.
     }
 
-    return 0;  // Indicating successful completion
+    std::cout << "\nStatements:\n";
+    std::cout << "x = 10;  // This is a statement.\n";
+    std::cout << "if (y > x) { ... }  // This is a statement.\n";
+
+    return 0;  // This is a return statement.
 }
+
+

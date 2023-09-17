@@ -68,7 +68,13 @@ Here's a brief overview of the lessons and the topics they cover:
 
 - **[CPP Programming Structure](./2.CPPProgrammingStructure/README.md)**: This lesson covers the fundamental components of a C++ program, such as the `#include` directive, `main()` function,namespaces as well as fundamental types ( to help you stay in sync with tutorials in the lab). 
 
-(To stay updated on the latest lessons and topics, git pull the repository regularly.)
+>To stay updated on the latest lessons and topics, git pull the repository regularly. 
+> If you did some changes in the repository, you can stash them before pulling the repository and then apply them back after pulling the repository if you need it.
+> ```bash
+> git stash
+> git pull
+> git stash apply # or git stash pop if you want to remove the stash after applying it
+> ```
 
 ## Note
 

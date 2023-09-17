@@ -6,6 +6,7 @@ Welcome to the C++ Project Guide. This document provides a brief overview of var
 ## 1. Project Setup and Naming Conventions
 - **Setting Up a development environment**: To get started with C++ development, you'll need to set up a development environment. For a detailed guide, see [Setting Up a Development Environment](./SETUP.md)
 - **GIT**: GIT is a version control system that allows you to track changes in your code. For a detailed guide, see [GIT](./GIT.md)
+- **Command Prompt and Terminal**: These are tools that allow you to interact with your computer using text commands. For a detailed guide, see [Command Prompt and Terminal](./WHATCMP%26TERMINAL.md)
 - **Building and Compiling**: Under the hood, C++ is a compiled language. This means that your source code is converted into machine code before it's executed. For a detailed guide, see [Building and Compiling](./BUILDINGAC++PROGRAM.md).
 
 - **CMakeLists and Makefile**: These are essential files for building and compiling your C++ project. They define how your source files are compiled, linked, and turned into executable programs. For a detailed guide, see [CMakeLists and Makefile Guide](./1.HelloWorld/C++INTRO.md).
@@ -13,6 +14,7 @@ Welcome to the C++ Project Guide. This document provides a brief overview of var
 - **Naming Conventions**: Consistent naming conventions are crucial for code readability and maintainability. For an in-depth look at naming conventions in C++, check out our [Naming Conventions Guide](./1.HelloWorld/C++INTRO.md?plain=1#L90).
 
 - **Running the Code**: To understand how to compile and run your C++ code, refer to the [Running the Code Guide](./1.HelloWorld/HOWTO.md).
+
 
 ## 2. Compiler Feedback
 

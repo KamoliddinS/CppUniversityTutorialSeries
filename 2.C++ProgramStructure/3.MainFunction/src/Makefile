@@ -1,7 +1,7 @@
 # Variables
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall
-TARGET = include_preprocessor
+TARGET = main_function
 SOURCES = main.cpp
 
 # Default rule

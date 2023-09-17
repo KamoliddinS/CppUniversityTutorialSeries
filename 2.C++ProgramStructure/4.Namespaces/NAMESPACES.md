@@ -84,6 +84,20 @@ namespace Outer {
 int z = Outer::inlineVar;  // No need for Outer::Inner:: prefix
 ```
 
+###  Using Qualified Names
+```cpp
+#include <iostream>
+using std::cout;
+using std::cin; 
+using std::endl;
+
+
+int main() {
+    int x = 10;
+    cout << "x = " << x << endl;
+    return 0;
+}
+```
 ## Conclusion
 
 Namespaces are a powerful feature in C++ that help in organizing code and preventing naming collisions. By understanding and using namespaces effectively, you can write cleaner, more modular, and conflict-free code.

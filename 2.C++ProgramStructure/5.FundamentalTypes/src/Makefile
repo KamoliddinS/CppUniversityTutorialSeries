@@ -1,7 +1,7 @@
 # Variables
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall
-TARGET = namespaces
+TARGET = fundamental_data_types
 SOURCES = main.cpp
 
 # Default rule

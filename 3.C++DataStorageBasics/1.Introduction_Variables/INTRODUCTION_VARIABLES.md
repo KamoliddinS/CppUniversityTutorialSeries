@@ -27,16 +27,35 @@ bool isStudent;
 
 In the example above, `age`, `weight`, `initial`, and `isStudent` are the variable names. They can be used later in the program to store or retrieve data.
 
-### Initializing Variables
-
+### Initializing Variables 
 When you declare a variable, it's often a good idea to give it an initial value. This process is called initialization. You can initialize a variable at the time of declaration:
 
+
+#### C-style Initialization
 ```cpp
 int age = 20;
 float weight = 65.5;
 char initial = 'A';
 bool isStudent = true;
 ```
+
+#### Constractor Initialization
+
+```cpp
+int age(20);
+float weight(65.5);
+char initial('A');
+bool isStudent(true);
+```
+#### C++11 Uniform Initialization  (Recommended)
+
+```cpp
+int age{20};
+float weight{65.5};
+char initial{'A'};
+bool isStudent{true};
+```
+
 
 Alternatively, you can declare first and then initialize later:
 

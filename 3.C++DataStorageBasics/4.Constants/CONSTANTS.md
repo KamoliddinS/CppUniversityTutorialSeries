@@ -3,7 +3,7 @@
 
 In C++, a constant is a value that cannot be altered after its initialization. Constants are useful when you have values that you want to protect from inadvertent changes, or when you want to clearly communicate to other programmers that a value should not be modified.
 
-### 1. `const` Keyword
+### 1. `const` Keyword (Recommended)
 
 The `const` keyword is a type qualifier that you can use to declare constants with a specific type.
 
@@ -21,7 +21,7 @@ const int daysInWeek = 7;
 
 After the declaration, attempting to change the value of `daysInWeek` will result in a compile-time error.
 
-### 2. `#define` Preprocessor
+### 2. `#define` Preprocessor (Don't use it in modern C++)
 
 The `#define` directive allows you to define a constant without specifying its type. However, it's not a variable but rather a symbolic name for a value.
 

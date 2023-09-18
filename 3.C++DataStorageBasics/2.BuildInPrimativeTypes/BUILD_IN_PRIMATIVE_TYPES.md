@@ -55,11 +55,18 @@ Floating-point numbers can represent real numbers, including fractions.
    - **Size:** 1 byte (8 bits)
    - **Range:** -128 to 127 or 0 to 255
 
-2. **unsigned char:** A variation of `char` that doesn't account for sign.
-   
-   - **Range:** 0 to 255
 
-3. **wchar_t:** Used for wide character representation.
+2. **char16_t:** Used for Unicode characters.
+
+   - **Size:** 2 bytes (16 bits)
+   - **Range:** 0 to 65,535
+
+3. **char32_t:** Used for Unicode characters.
+
+   - **Size:** 4 bytes (32 bits)
+   - **Range:** 0 to 4,294,967,295
+
+4. **wchar_t:** Used for wide character representation.
 
 ### Boolean Type
 

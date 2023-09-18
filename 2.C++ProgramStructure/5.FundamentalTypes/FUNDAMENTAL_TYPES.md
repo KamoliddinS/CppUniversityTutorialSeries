@@ -34,6 +34,57 @@ A number system is a way to represent numbers. We use different number systems i
 - **Octal** and **Hexadecimal** are shorter ways to show binary numbers. They are easier to read than long binary numbers.
 - **Decimal** is what we use every day for counting.
 
+
+
+
+
 ## 4. How to Convert Between Them?
 
 We have provided a simple C++ code in this repository to help you convert between these number systems. Check the code, try it out, and learn!
+
+## 5. Number Systems in C++: Usage and Encounters
+
+In C++, developers often come across different number systems, especially when dealing with low-level programming, memory management, or bitwise operations. Here's where you might see or use them:
+
+### Decimal (Base 10):
+
+- **Usage in C++**: This is the default number system for integer and floating-point literals.
+- **Where You'll See It**: Almost everywhere in code, from loop counters to array indices.
+  ```cpp
+  int decimalNumber = 123;
+  ```
+
+### Binary (Base 2):
+
+- **Usage in C++**: Introduced in C++14, you can represent binary literals using the `0b` or `0B` prefix.
+- **Where You'll See It**: Bitwise operations, flags, or when directly manipulating bits.
+  ```cpp
+  int binaryNumber = 0b1011;  // Equivalent to decimal 11
+  ```
+
+### Octal (Base 8):
+
+- **Usage in C++**: Octal literals are prefixed with a `0`.
+- **Where You'll See It**: Less common in modern C++ code, but sometimes used in file permissions or representing certain character codes.
+  ```cpp
+  int octalNumber = 0754;  // Equivalent to decimal 492
+  ```
+
+### Hexadecimal (Base 16):
+
+- **Usage in C++**: Hexadecimal literals use the `0x` or `0X` prefix.
+- **Where You'll See It**: Memory addresses, color codes, bitwise operations, or when interfacing with certain hardware or external systems.
+  ```cpp
+  int hexNumber = 0x2AF;  // Equivalent to decimal 687
+  ```
+
+### Encounters in C++:
+
+- **Memory Addresses**: When you use pointers, the addresses are often displayed in hexadecimal.
+  
+- **Bit Manipulation**: When working with individual bits of data, you might use binary or hexadecimal to set or check specific bits.
+  
+- **File Permissions**: On UNIX-like systems, file permissions are often represented in octal.
+  
+- **Color Representation**: In graphics programming, colors might be represented as hexadecimal values, e.g., `0xFF5733` for a specific shade of orange.
+

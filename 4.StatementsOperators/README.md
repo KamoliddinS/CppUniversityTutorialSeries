@@ -34,6 +34,15 @@ Relational operators are used to compare two values and determine the relationsh
 ### 9. [Logical Operators](9.LogicalOpertors/LOGICALOPERATOR.md)
 Logical operators are used to combine multiple conditions or to invert the value of a condition.
 
+
+### 10. [Operator Precedence](10.OpertorPrecedence/OPERTORPRECEDENCE.md)
+
+
+## Projects 
+### 1. [Binary Converter](./P_BinaryConverterCalculator/README.md)
+
+### 2. [Grade Calculator](./P_GradeBookManager/README.md)
+
 ## Conclusion
 
 Understanding statements and operators is fundamental to mastering C++ programming. Each topic provides detailed insights, and you can click on the links to dive deeper into each subject.

@@ -4,5 +4,5 @@
 
 
 void greet() {
-    std::cout << "Hello from the greet() function defined in myHeader.h!" << std::endl;
+    std::cout << "Hello from the greet() function defined in greeting.cpp!" << std::endl;
 }

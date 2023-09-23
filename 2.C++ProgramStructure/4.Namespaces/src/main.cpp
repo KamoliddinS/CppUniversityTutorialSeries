@@ -1,5 +1,7 @@
 #include <iostream>
 
+
+int myVar = 3;
 // Defining a namespace
 namespace MyNamespace {
     int myVar = 10;
@@ -25,19 +27,23 @@ namespace {
     int anonymousVar = 30;
 }
 
+// using namespace std; 
+
 int main() {
-    // Accessing members using the scope resolution operator
-    std::cout << "MyNamespace::myVar: " << MyNamespace::myVar << std::endl;
-    MyNamespace::myFunction();
 
-    // Accessing nested namespace members
-    std::cout << "Outer::Inner::innerVar: " << Outer::Inner::innerVar << std::endl;
+    std::cout << "myVar: " << MyNamespace::myVar << std::endl;
+    // // Accessing members using the scope resolution operator
+    // std::cout << "MyNamespace::myVar: " << MyNamespace::myVar << std::endl;
+    // MyNamespace::myFunction();
 
-    // Accessing inline namespace members
-    std::cout << "Outer::inlineVar: " << Outer::inlineVar << std::endl;
+    // // Accessing nested namespace members
+    // std::cout << "Outer::Inner::innerVar: " << Outer::Inner::innerVar << std::endl;
 
-    // Accessing anonymous namespace members
-    std::cout << "anonymousVar: " << anonymousVar << std::endl;
+    // // Accessing inline namespace members
+    // std::cout << "Outer::inlineVar: " << Outer::inlineVar << std::endl;
+
+    // // Accessing anonymous namespace members
+    // std::cout << "anonymousVar: " << anonymousVar << std::endl;
 
     return 0;
 }

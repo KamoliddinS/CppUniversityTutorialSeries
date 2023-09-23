@@ -16,6 +16,7 @@ Welcome to the C++ programming Structure and Fundametal types guide! This README
 5. **Fundamental Types**: C++ offers a variety of data types, from integers to characters to floating-point numbers. Understand the basics of these types and when to use them. [Read in detail here](./5.FundamentalTypes/FUNDAMENTAL_TYPES.md).
 
 6. **Basic Input and Output**: Interacting with users is a core part of programming. Learn how to take input from users and display output using `cin` and `cout`. [Discover more here](./6.BasicInputAndOutput/BASICINPUTANDOUTPU.md).
+7. **1's and 2's Complement**: Computers use binary numbers to store data. Learn how to represent negative numbers in binary using 1's and 2's complement. [Read more here](./7.1s2sCompliment/README.md).
 
 ## Conclusion
 

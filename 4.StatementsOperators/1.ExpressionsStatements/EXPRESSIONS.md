@@ -1,6 +1,7 @@
 # Expressions in Programming
 
 In programming, an **expression** is a combination of one or more values, variables, operators, and functions that the programming language interprets and computes to produce another value. This means that when an expression is evaluated, it returns a value.
+> "a sequence of operators and operands that specifies a computation" - [Wikipedia](https://en.wikipedia.org/wiki/Expression_(computer_science))
 
 Expressions are fundamental elements in most programming languages. They can range from simple values to more complex combinations of values, variables, and operations.
 

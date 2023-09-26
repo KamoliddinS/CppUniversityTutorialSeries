@@ -31,6 +31,7 @@ int main() {
         cout << "6. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
+        // choice = 1;
 
         switch (choice) {
             case 1: 
@@ -64,8 +65,10 @@ void addStudent(vector<Student>& students) {
     Student newStudent;
     cout << "Enter student's name: ";
     cin >> newStudent.name;
+    // newStudent.name = "John";
     cout << "Enter student's grade: ";
     cin >> newStudent.grade;
+    // newStudent.grade = 100;
     students.push_back(newStudent);
 }
 

@@ -14,7 +14,8 @@ void printBookDetails(const Book& b) {
 }
 
 int main() {
-    Book book1 = {"The Alchemist", "Paulo Coelho", 163};
+    Book book1; 
+    book1 = {"Harry Potter", "JK Rowling", 500};
     Book book2 = {"1984", "George Orwell", 328};
 
     printBookDetails(book1);

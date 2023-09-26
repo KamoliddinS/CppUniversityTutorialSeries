@@ -13,6 +13,7 @@ int main() {
     
     cout << vowels[0] << endl;
     cout << vowels[4] << endl;
+    cout << vowels[6] << endl;  // no bounds checkings
     
 //    vector <int> test_scores (3);  // 3 elements all initialized to zero
 //   vector <int> test_scores (3, 100); // 3 elements all initialized to 100

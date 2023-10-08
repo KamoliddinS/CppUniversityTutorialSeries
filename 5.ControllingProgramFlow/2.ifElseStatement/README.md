@@ -90,5 +90,3 @@ In the next lesson, we will explore more advanced conditional constructs and how
 ## Homework
 1. Write a C++ program that takes a user's score as input and outputs their letter grade based on the grading scale (e.g., A, B, C, D, F).
 2. Experiment with nested `if-else` statements to create more complex branching logic.
-
-Happy coding!

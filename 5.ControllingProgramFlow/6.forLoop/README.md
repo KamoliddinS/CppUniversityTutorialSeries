@@ -49,5 +49,4 @@ Inside a `for` loop, you can use loop control statements like `break` and `conti
 ## Conclusion
 The `for` loop is a fundamental looping construct in C++ that allows you to repeat code for a known number of iterations. It is versatile and widely used in various programming scenarios.
 
-In subsequent lessons, we will explore more advanced concepts related to the `for` loop, such as iterating through arrays and implementing complex patterns.
 

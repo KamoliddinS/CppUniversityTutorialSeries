@@ -59,7 +59,7 @@ int main()
             string nameToDelete;
             cout << "Enter the name of the student to delete: ";
             cin >> nameToDelete;
-            deleteStudent(students, nameToDelete);
+            // deleteStudent(students, nameToDelete);s
             break;
         }
         case 7:

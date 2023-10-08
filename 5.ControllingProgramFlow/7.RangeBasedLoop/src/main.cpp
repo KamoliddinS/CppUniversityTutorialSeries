@@ -18,5 +18,11 @@ int main() {
     for (auto name : names) {
         std::cout << "Name: " << name << std::endl;
     }
+
+
+    //{1, 2, 3, 4, 5} is collection of values
+    for (auto value : {1, 2, 3, 4, 5}) {
+        std::cout << "Value: " << value << std::endl;
+    }
     return 0;
 }

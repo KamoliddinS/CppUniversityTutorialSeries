@@ -38,6 +38,12 @@ Nested loops are loops within loops. They are used for complex iterations, such 
 In this section, you've explored various aspects of controlling program flow in C++. You've learned how to make decisions with if and switch statements, manage loops for repetitive tasks, and handle flow control within loops. Understanding these concepts is essential for writing efficient and structured C++ programs. Continue building on these fundamentals to become a proficient C++ programmer.
 
 
+## Suggestions
+KISS - Keep it simple, stupid
+KISS - Keep it simple and straightforward
+KISS - Keep it simple and short
+
+
 ## Further Reading
 
 - [geeksforgeeks - Decision Making in C++](https://www.geeksforgeeks.org/decision-making-c-c-else-nested-else/)

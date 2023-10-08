@@ -6,20 +6,25 @@ int main() {
     std::vector<Student> students;
 
     // Collect student data
-    while (true) {
-        Student student;
-        std::cout << "Enter student name (or 'q' to quit): ";
-        std::cin >> student.name;
+   char selection {};
+   do {
+         Student student;
+         std::cout << "Enter student name (or 'q' to quit): ";
+         std::cin >> student.name;
+    
+         if (student.name == "q") {
+              break;
+         }
+    
+         std::cout << "Enter student score: ";
+         std::cin >> student.score;
+         students.push_back(student);
+    
+         std::cout << "Would you like to enter another student (Y/N)? ";
+         std::cin >> selection;
+    } while (selection == 'y' || selection == 'Y');
 
-        if (student.name == "q") {
-            break;
-        }
-
-        std::cout << "Enter student score: ";
-        std::cin >> student.score;
-        students.push_back(student);
-    }
-
+    
     // Calculate and display grades
     for (const Student& student : students) {
         char grade;

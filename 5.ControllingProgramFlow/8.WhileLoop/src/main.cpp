@@ -39,5 +39,16 @@ int main() {
         std::cout << "Name: " << student.name << ", Score: " << student.score << ", Grade: " << grade << std::endl;
     }
 
+    // Example 2 - Using while loop to validate user input
+    // int number {};
+    // std:: cout << "Enter an integer less than 100: ";
+    // std::cin >> number;
+
+    // while (number >= 100) {
+    //     std::cout << "Enter an integer less than 100: ";
+    //     std::cin >> number;
+    // }
+    std::cout << "Thanks!" << std::endl;
+
     return 0;
 }

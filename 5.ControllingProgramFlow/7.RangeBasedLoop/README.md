@@ -29,12 +29,40 @@ int main() {
     for (int num : numbers) {
         std::cout << "Number: " << num << std::endl;
     }
-
     return 0;
 }
 ```
 
 In this example, we have a `std::vector` named `numbers`, and we use a range-based `for` loop to iterate through its elements and print them.
+
+### Auto Keyword
+The range-based `for` loop can also be used with the `auto` keyword to automatically deduce the data type of the elements in the collection:
+
+```cpp
+#include <iostream>
+#include <vector>
+
+Struct Employee {
+    std::string name;
+    int age;
+};
+
+int main() {
+    std::vector<Employee> employees = {
+        {"John", 30},
+        {"Jane", 25},
+        {"Joe", 20}
+    };
+
+    // Using a range-based for loop with the auto keyword
+    for (auto employee : employees) {
+        std::cout << "Name: " << employee.name << std::endl;
+        std::cout << "Age: " << employee.age << std::endl;
+    }
+
+    return 0;
+}
+```
 
 ## Common Use Cases
 The range-based `for` loop is particularly useful in scenarios where you want to iterate through a collection without needing to manage an explicit loop control variable:

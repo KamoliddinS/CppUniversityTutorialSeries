@@ -1,26 +1,58 @@
-#include <iostream>
+// main.cpp
 
-// Function that computes the sum of all elements in an integer array
-int sumArrayElements(int arr[], int size) {
-    int sum = 0;
-    for (int i = 0; i < size; i++) {
-        sum += arr[i];
-    }
-    return sum;
-}
+#include <iostream> // For input-output stream operations
+
+// Function Prototypes
+void printArray(int arr[], int size);
+void modifyArray(int arr[], int size);
+void print2DArray(int arr[][3], int rows);
 
 int main() {
-    // Define an integer array
-    int numbers[] = {1, 2, 3, 4, 5};
+    // Introduction
+    std::cout << "Demonstrating Passing Arrays to Functions in C++\n" << std::endl;
+
+    // One-dimensional Array
+    int arr[5] = {1, 2, 3, 4, 5};
+    std::cout << "Original Array: ";
+    printArray(arr, 5);
+
+    modifyArray(arr, 5);
+
+    std::cout << "Modified Array: ";
+    printArray(arr, 5);
+
+    // Two-dimensional Array
+    int arr2D[2][3] = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
     
-    // Calculate the size of the array
-    int arraySize = sizeof(numbers) / sizeof(numbers[0]);
-
-    // Call the sumArrayElements function, passing the array and its size
-    int totalSum = sumArrayElements(numbers, arraySize);
-
-    // Display the sum of the array elements
-    std::cout << "Sum of array elements: " << totalSum << std::endl;
+    std::cout << "\n2D Array:" << std::endl;
+    print2DArray(arr2D, 2);
 
     return 0;
 }
+
+// Function Definitions
+void printArray(int arr[], int size) {
+    for(int i = 0; i < size; i++) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
+void modifyArray(int arr[], int size) {
+    for(int i = 0; i < size; i++) {
+        arr[i] *= 2;  // Double the value
+    }
+}
+
+void print2DArray(int arr[][3], int rows) {
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < 3; j++) {
+            std::cout << arr[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+

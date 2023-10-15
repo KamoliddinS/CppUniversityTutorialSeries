@@ -1,70 +1,62 @@
 
 # Inline Functions in C++
 
-Inline functions are a feature in C++ that allow you to define small, frequently used functions for performance optimization. When a function is declared as inline, the compiler may replace function calls with the actual function code, reducing the overhead of function calls.
+Inline functions are a powerful feature in C++ that can optimize the function call overhead by substituting the function call with the actual function code. Instead of following the traditional function call mechanism, the compiler places a copy of the function's code in place of every call to that function, if it deems suitable.
 
-## Declaring an Inline Function
+## Table of Contents
 
-To declare a function as inline in C++, you use the `inline` keyword before the function definition. Here's the syntax:
+1. [What is an Inline Function?](#what-is-an-inline-function)
+2. [Advantages of Inline Functions](#advantages-of-inline-functions)
+3. [Limitations](#limitations)
+4. [Usage](#usage)
+5. [Examples](#examples)
+6. [Key Takeaways](#key-takeaways)
 
-```cpp
-inline return_type function_name(parameters) {
-    // Function code here
+## What is an Inline Function?
+
+An inline function is a function that's expanded in line when it's invoked. When the inline function is called, the compiler replaces the function call with the function code itself (inline expansion), which can lead to faster code execution at the cost of increased binary size.
+
+## Advantages of Inline Functions
+
+1. **Faster Execution**: Eliminates the overhead of function calls.
+2. **No Push/Pop Operations**: No operations on the stack for passing arguments and retrieving the return value.
+3. **Optimization**: Compiler can perform optimizations as the function body is available directly at the call site.
+
+## Limitations
+
+1. **Code Size Increase**: As the function code is duplicated at each call site, it can lead to an increase in the binary size.
+2. **Not Always Inlined**: Just because a function is declared `inline` doesn't guarantee that the compiler will inline it.
+3. **Not Suitable for Large Functions**: Inlining can cause code bloat, hence it's not advisable for lengthy functions.
+
+## Usage
+
+To make a function inline, you prefix its declaration with the `inline` keyword:
+
+```c++
+inline int add(int a, int b) {
+    return a + b;
 }
 ```
 
-- `return_type`: The data type of the value that the function returns (e.g., `int`, `double`, etc.).
+## Examples
 
-- `function_name`: The name of the function.
+1. **Simple Inline Function**
 
-- `parameters`: The parameters the function takes, if any.
-
-## Example
-
-```cpp
-#include <iostream>
-
-// Inline function that calculates the square of an integer
-inline int square(int x) {
-    return x * x;
+```c++
+inline int square(int n) {
+    return n * n;
 }
 
 int main() {
-    int number = 5;
-    
-    // Function call to 'square' is replaced by the actual code
-    int result = square(number);
-    
-    std::cout << "Square of " << number << " is " << result << std::endl;
-    
-    return 0;
+    int result = square(5);  // No actual function call here during execution, if inlined
+    std::cout << result << std::endl;  // Outputs: 25
 }
 ```
 
-In this example:
+## Key Takeaways
 
-- We declare an inline function named `square` that calculates the square of an integer.
+1. Inline functions can speed up execution by avoiding function call overhead.
+2. They might increase the binary size due to the duplication of function code.
+3. The `inline` keyword is more of a request than a command, and the compiler might choose not to inline a function.
+4. They are best used judiciously, especially for small, frequently called functions.
 
-- In the `main` function, we declare an integer variable `number` and assign it the value 5.
-
-- We call the `square` function, and the compiler may replace the function call with the actual code, eliminating the overhead of a function call.
-
-- We use `std::cout` to display the result, demonstrating an inline function call.
-
-## Benefits of Inline Functions
-
-- **Performance**: Inline functions can improve performance by reducing the overhead of function calls, especially for small and frequently used functions.
-
-- **Code Size**: They can result in smaller executable code size because the function code is inserted directly where it's called, avoiding duplication of code.
-
-- **Readability**: Inline functions can enhance code readability by encapsulating small, well-defined operations.
-
-## Considerations
-
-- **Size**: Inline functions are most effective for small functions. Defining large functions as inline can increase code size and reduce the benefits.
-
-- **Compile Time**: The decision to inline a function is made by the compiler. Not all functions declared as inline are necessarily inlined; it depends on the compiler's optimization settings.
-
-- **Header Files**: Inline functions are often defined in header files to ensure the function code is available wherever it's called. Be cautious about including large inline functions in header files, as it can increase compilation times.
-
-Inline functions can be a powerful tool for optimizing performance-critical code sections in C++. However, their use should be judicious, focusing on small, frequently used functions to achieve the desired performance improvements.

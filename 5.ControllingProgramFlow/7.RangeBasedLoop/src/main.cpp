@@ -2,12 +2,12 @@
 #include <vector>
 
 int main() {
-    std::vector<int> numbers = {1, 2, 3, 4, 5};
+    // std::vector<int> numbers = {1, 2, 3, 4, 5, 23,45,45};
 
-    // Using a range-based for loop to print elements of a vector
-    for (int num : numbers) {
-        std::cout << "Number: " << num << std::endl;
-    }
+    // // Using a range-based for loop to print elements of a vector
+    // for (int num : numbers) {
+    //     std::cout << "Number: " << num << std::endl;
+    // }
 
 
 
@@ -20,9 +20,9 @@ int main() {
     }
 
 
-    //{1, 2, 3, 4, 5} is collection of values
-    for (auto value : {1, 2, 3, 4, 5}) {
-        std::cout << "Value: " << value << std::endl;
-    }
+    // //{1, 2, 3, 4, 5} is collection of values
+    // for (auto value : {1, 2, 3, 4, 5}) {
+    //     std::cout << "Value: " << value << std::endl;
+    // }
     return 0;
 }

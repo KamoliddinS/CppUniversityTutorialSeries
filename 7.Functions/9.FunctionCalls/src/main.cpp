@@ -1,46 +1,58 @@
-// How function calls work
-// The call stack
-#include <iostream>
+// main.cpp
 
-using namespace std;
+#include <iostream>   // For input-output stream operations
 
-void func2(int &x, int y, int z) {
-    x+= y + z;
-}
-
-int func1(int a, int b) {
-    int result {};
-    result = a + b;
-    func2(result, a , b);
-    return result;
-}
+// Function Declaration
+void callByValue(int num);
+void callByReference(int& num);
+void callByPointer(int* num);
+int factorial(int n);
 
 int main() {
-    int x {10};
-    int y{20};
-    int z{};
-    z = func1(x,y);
-    cout << z << endl;
+    // Introduction
+    std::cout << "Demonstrating Function Calls in C++\n" << std::endl;
+
+    // Call by Value
+    int val = 10;
+    std::cout << "Original value (Before Call by Value): " << val << std::endl;
+    callByValue(val);
+    std::cout << "Value after Call by Value: " << val << std::endl;  // No change in value
+
+    // Call by Reference
+    int ref = 10;
+    std::cout << "\nOriginal value (Before Call by Reference): " << ref << std::endl;
+    callByReference(ref);
+    std::cout << "Value after Call by Reference: " << ref << std::endl;  // Value changed
+
+    // Call by Pointer
+    int ptrVal = 10;
+    int* ptr = &ptrVal;
+    std::cout << "\nOriginal value (Before Call by Pointer): " << ptrVal << std::endl;
+    callByPointer(ptr);
+    std::cout << "Value after Call by Pointer: " << ptrVal << std::endl;  // Value changed
+
+    // Recursive Function Call
+    int num = 5;
+    std::cout << "\nFactorial of " << num << " is: " << factorial(num) << std::endl;
+
     return 0;
 }
 
-/* What typically happens when main calls func1 (or any function calls another) ?
-    There are other ways to acheive the same results :)
-    
-    main:
-        push space for the return value
-        push space for the parameters
-        push the return address
-        transfer control to func1 (jmp)
-    func1:
-        push the address of the previous activation record
-        push any register values that will need to be restored before returning to the caller
-        perform the code in func1
-        restore the register values
-        restore the previous activation record (move the stack pointer)
-        store any function result
-        transfer control to the return address (jmp)
-    main:
-        pop the parameters
-        pop the return value
-*/
+// Function Definitions
+
+void callByValue(int num) {
+    num += 5;  // Modifying the local copy of the variable
+}
+
+void callByReference(int& num) {
+    num += 5;  // Modifying the original variable
+}
+
+void callByPointer(int* num) {
+    *num += 5;  // Modifying the original variable using pointer
+}
+
+int factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n-1);  // Recursive function call
+}

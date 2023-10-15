@@ -1,78 +1,97 @@
 
 # Function Calls in C++
 
-In C++, a function call is a fundamental concept that allows you to invoke and execute a function. Function calls are used to perform specific tasks, organize code, and make your programs more modular.
+In C++, functions are fundamental building blocks that allow us to modularize and reuse code. Function calls are the means by which we invoke these functions, passing control from one part of a program to another. This guide will explore the different types of function calls and their intricacies.
 
-## Syntax of a Function Call
+## Table of Contents
 
-The syntax of a function call in C++ is as follows:
+1. [What is a Function Call?](#what-is-a-function-call)
+2. [Types of Function Calls](#types-of-function-calls)
+    - [Call by Value](#call-by-value)
+    - [Call by Reference](#call-by-reference)
+    - [Call by Pointer](#call-by-pointer)
+3. [Recursive Calls](#recursive-calls)
+4. [Examples](#examples)
+5. [Key Takeaways](#key-takeaways)
 
-```cpp
-return_value = function_name(argument1, argument2, ...);
+## What is a Function Call?
+
+A function call is an instruction to execute a specific function. It provides a mechanism to pass input parameters (arguments) to a function and receive output (return values).
+
+## Types of Function Calls
+
+### Call by Value
+
+In this method, the actual value of an argument is passed to the function. Changes made to the parameter inside the function do not affect the original value.
+
+```c++
+void modify(int x) {
+    x = x + 10;  // This will not affect the original value
+}
 ```
 
-- `return_value`: If the function returns a value, it can be stored in a variable of the appropriate data type.
+### Call by Reference
 
-- `function_name`: The name of the function to be called.
+Here, a reference to the argument, rather than a copy, is passed to the function. Thus, changes inside the function will reflect in the original variable.
 
-- `argument1, argument2, ...`: The arguments or parameters to be passed to the function. These values can be literals, variables, or expressions.
+```c++
+void modify(int &x) {
+    x = x + 10;  // This will affect the original value
+}
+```
 
-## Example
+### Call by Pointer
 
-```cpp
-#include <iostream>
+In this approach, the address of the variable (pointer) is passed to the function. Changes made using this pointer will affect the original variable.
 
-// Function that calculates the square of an integer
-int square(int x) {
-    return x * x;
+```c++
+void modify(int *x) {
+    *x = *x + 10;  // This will affect the original value
+}
+```
+
+## Recursive Calls
+
+A function that calls itself is termed as recursive. It's essential to have a termination condition in recursive functions to prevent infinite loops.
+
+```c++
+int factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n-1);
+}
+```
+
+## Examples
+
+1. **Simple Function Call**
+
+```c++
+void greet() {
+    std::cout << "Hello, World!" << std::endl;
 }
 
 int main() {
-    int number = 5;
-    
-    // Function call to 'square' with 'number' as the argument
-    int result = square(number);
-    
-    std::cout << "Square of " << number << " is " << result << std::endl;
-    
-    return 0;
+    greet();  // Function call
 }
 ```
 
-In this example:
+2. **Function Call with Return Value**
 
-- We define a function named `square` that calculates the square of an integer.
+```c++
+int square(int num) {
+    return num * num;
+}
 
-- In the `main` function, we declare an integer variable `number` and assign it the value 5.
+int main() {
+    int result = square(5);  // Function call with return value
+    std::cout << result << std::endl;  // Outputs: 25
+}
+```
 
-- We call the `square` function with `number` as the argument, and the result is stored in the `result` variable.
+## Key Takeaways
 
-- We use `std::cout` to display the result, demonstrating a function call.
+1. Functions modularize and enhance the reusability of code.
+2. A function call transfers control to a specific function.
+3. There are various methods of function calls like call by value, call by reference, and call by pointer.
+4. Recursive functions can be powerful but require careful handling to prevent infinite loops.
 
-## Key Concepts
-
-### Passing Arguments
-
-- Arguments are values or expressions passed to a function when it is called. Functions use these arguments to perform specific tasks.
-
-### Return Value
-
-- Functions may return a value. The return value can be of any data type, including custom-defined types. It's specified by the function's return type.
-
-### Function Signature
-
-- A function's signature consists of its name and the types and order of its parameters. It must match the declaration and definition of the function.
-
-### Function Overloading
-
-- Multiple functions can have the same name as long as their signatures (parameter types and order) differ. This is known as function overloading.
-
-### Function Prototypes
-
-- Function prototypes are declarations that provide information about a function's name, return type, and parameter list. They help the compiler understand how to call the function correctly.
-
-### Recursive Function Calls
-
-- A function can call itself, either directly or indirectly. This is known as recursion and is used in various algorithms and problem-solving techniques.
-
-Function calls are fundamental to organizing and structuring code in C++. They allow you to create reusable and modular functions, making your code more readable and maintainable.

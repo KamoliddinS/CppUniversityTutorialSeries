@@ -1,57 +1,44 @@
-// Function Parmameters
-#include <iostream>
-#include <string>
-#include <vector>
+// main.cpp
 
-using namespace std;
+#include <iostream> // For input-output stream operations
 
-void pass_by_value1(int num);
-void pass_by_value2(string s);
-void pass_by_value3(vector<string> v);
-void print_vector(vector<string> v);
-
-void pass_by_value1(int num) {
-    num = 1000;
-}
-
-void pass_by_value2(string s) {
-    s = "Changed";
-}
-
-void pass_by_value3(vector<string> v) {
-    v.clear();  // delete all vector elements
-}
-
-void print_vector(vector<string> v) {
-    for (auto s: v) 
-        cout << s << " ";
-    cout << endl;
-}
+// Function Prototypes
+int add(int, int);                           // Takes two value parameters and returns an integer.
+void swap(int&, int&);                       // Takes two reference parameters and does not return.
+void displayMessage(const std::string&);     // Takes a constant reference parameter and does not return.
 
 int main() {
-    int num {10};
-    int another_num {20};
-    
-    cout << "num before calling pass_by_value1: " << num << endl;
-    pass_by_value1(num);
-    cout << "num after calling pass_by_value1: " << num << endl;
-    
-    cout << "\nanother_num before calling pass_by_value1: " << another_num << endl;
-    pass_by_value1(another_num);
-    cout << "another_num after calling pass_by_value1: " << another_num << endl;
+    // Introduction
+    std::cout << "Exploring Function Parameters and Return Statements in C++\n" << std::endl;
 
-    string name {"Frank"};
-    cout << "\nname before calling pass_by_value2: " << name << endl;
-    pass_by_value2(name);
-    cout << "name after calling pass_by_value2: " << name << endl;
+    // Demonstration: Function with Value Parameters
+    int num1 = 5, num2 = 10;
+    int sum = add(num1, num2);
+    std::cout << "Sum of " << num1 << " and " << num2 << " is: " << sum << std::endl;
 
-    vector<string> stooges {"Larry", "Moe", "Curly"};
-    cout << "\nstooges before calling pass_by_value3: ";
-    print_vector(stooges);
-    pass_by_value3(stooges);
-    cout << "stooges after calling pass_by_value3: ";
-    print_vector(stooges);
-    
-    cout << endl;
+    // Demonstration: Function with Reference Parameters
+    std::cout << "Before swap: num1 = " << num1 << ", num2 = " << num2 << std::endl;
+    swap(num1, num2);
+    std::cout << "After swap: num1 = " << num1 << ", num2 = " << num2 << std::endl;
+
+    // Demonstration: Function without Return Value
+    displayMessage("Hello from the displayMessage function!");
+
     return 0;
 }
+
+// Function Definitions
+int add(int a, int b) {
+    return a + b;  // Return the sum
+}
+
+void swap(int &x, int &y) {
+    int temp = x;
+    x = y;
+    y = temp;  // Swaps values of x and y
+}
+
+void displayMessage(const std::string &message) {
+    std::cout << message << std::endl;
+}
+

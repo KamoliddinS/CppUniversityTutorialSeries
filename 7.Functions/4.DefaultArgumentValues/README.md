@@ -1,80 +1,61 @@
 
-# Function Prototypes in C++
+# Default Argument Values in C++
 
-In C++, function prototypes are declarations that provide information to the compiler about a function before its actual definition. Function prototypes play a crucial role in ensuring that functions are used correctly throughout your program.
+In C++, it's possible to specify default values for function parameters. This allows a function to be called with fewer arguments than it is defined with, making the arguments optional.
 
-## Purpose of Function Prototypes
+## Table of Contents
 
-Function prototypes serve several important purposes:
+1. [Understanding Default Arguments](#understanding-default-arguments)
+2. [How to Specify Default Values?](#how-to-specify-default-values)
+3. [Rules and Constraints](#rules-and-constraints)
+4. [Examples](#examples)
+5. [Key Takeaways](#key-takeaways)
 
-1. **Function Signature**: They define the function's signature, including its name, return type, and parameter list. This information helps the compiler understand how to call the function and what to expect in terms of inputs and outputs.
+## Understanding Default Arguments
 
-2. **Order of Function Calls**: Function prototypes allow you to call functions in any order within your code. This is particularly useful when functions are defined after their first use in the program.
+Default arguments provide values that a function uses if the caller doesn't provide them. It's a way to make function calls more flexible and to reduce the number of overloaded functions.
 
-3. **Type Checking**: They enable the compiler to perform type checking for function arguments and return values, helping catch type-related errors early in the compilation process.
+## How to Specify Default Values?
 
-4. **Header Files**: Function prototypes are often placed in header files (.h files), making it easy to share function declarations across multiple source files.
+When defining a function, assign the default values to the desired parameters using the assignment (`=`) operator.
 
-## Syntax of Function Prototypes
-
-A function prototype has the following syntax:
-
-```cpp
-return_type function_name(parameters);
-```
-
-Here's what each part represents:
-
-- **return_type**: The data type that the function returns. It can be any valid C++ data type.
-
-- **function_name**: The name of the function.
-
-- **parameters**: The list of parameters the function expects, including their data types and names.
-
-## Example
-
-Let's consider a simple function prototype for a function that calculates the area of a rectangle:
-
-```cpp
-double calculateRectangleArea(double length, double width);
-```
-
-In this example:
-
-- `double` is the return type, indicating that the function returns a double value (the area).
-
-- `calculateRectangleArea` is the name of the function.
-
-- `(double length, double width)` specifies that the function expects two parameters, both of type double: `length` and `width`.
-
-## Function Definition vs. Prototype
-
-Function prototypes provide the declaration of a function without the actual implementation. The full function definition, including the code inside the function, is provided separately in the source file. For example:
-
-**Function Prototype:**
-
-```cpp
-double calculateRectangleArea(double length, double width);
-```
-
-**Function Definition:**
-
-```cpp
-double calculateRectangleArea(double length, double width) {
-    // Function implementation
-    double area = length * width;
-    return area;
+```c++
+returnType functionName(dataType parameter = defaultValue) {
+   // function body
 }
 ```
 
-## Benefits of Function Prototypes
+## Rules and Constraints
 
-- **Modularity**: Function prototypes promote code modularity by separating the declaration (what the function does) from the implementation (how it does it).
+1. **Order:** Default arguments must be the trailing ones (i.e., you can't provide a default for the first argument without providing defaults for the second and subsequent arguments).
+2. **Declaration:** If a function is declared before it's defined, the default value should be specified in the declaration and not in the definition.
+3. **Overloading:** Be cautious when overloading functions that have default arguments, as this can lead to ambiguity.
 
-- **Readability**: They make the code more readable by providing a clear overview of the functions used in the program.
+## Examples
 
-- **Error Prevention**: Prototypes help catch errors related to function signatures and argument types during compilation, reducing runtime errors.
+1. **Basic Default Argument**
 
-- **Code Organization**: They allow functions to be defined in any order within the source file, facilitating better code organization.
+```c++
+void greet(std::string name = "Guest") {
+    std::cout << "Hello, " << name << "!" << std::endl;
+}
+```
 
-In summary, function prototypes are essential for correctly using functions in C++ programs. They provide a clear interface for functions, improve code organization, and help prevent common programming errors.
+Calling `greet();` will print "Hello, Guest!", but calling `greet("Alice");` will print "Hello, Alice!".
+
+2. **Multiple Default Arguments**
+
+```c++
+void displayBox(int width = 10, int height = 5) {
+    // Function body to display a box with given width and height
+}
+```
+
+Here, both `width` and `height` have default values. The function can be called in various ways: `displayBox()`, `displayBox(15)`, or `displayBox(15, 10)`.
+
+## Key Takeaways
+
+1. Default arguments allow you to provide default values for function parameters.
+2. They must be trailing in the list of function parameters.
+3. Using default arguments can make your code more flexible but be wary of potential ambiguities, especially when combined with function overloading.
+

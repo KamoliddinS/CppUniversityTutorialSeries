@@ -1,25 +1,31 @@
-#include <iostream>
 
-// Function prototype
-double calculateRectangleArea(double length, double width);
+#include <iostream> // For input-output stream operations
+
+// Function Prototypes
+double computeAverage(int, int); // A prototype for a function that calculates the average of two integers
+void displayMessage(); // A prototype for a function that displays a message
 
 int main() {
-    // Call the calculateRectangleArea function
-    double length = 5.0;
-    double width = 3.0;
-    
-    // Function call using the prototype
-    double area = calculateRectangleArea(length, width);
-    
-    // Display the result
-    std::cout << "Rectangle Area: " << area << std::endl;
-    
+    // Introduction
+    std::cout << "Demonstrating Function Prototypes in C++\n" << std::endl;
+
+    // Calling the displayMessage function
+    displayMessage();
+
+    // Using the computeAverage function
+    int num1 = 10, num2 = 20;
+    double average = computeAverage(num1, num2);
+    std::cout << "The average of " << num1 << " and " << num2 << " is: " << average << std::endl;
+
     return 0;
 }
 
-// Function definition
-double calculateRectangleArea(double length, double width) {
-    // Function implementation
-    double area = length * width;
-    return area;
+// Function Definitions
+double computeAverage(int a, int b) {
+    return (static_cast<double>(a) + b) / 2;
 }
+
+void displayMessage() {
+    std::cout << "This is an example demonstrating function prototypes!" << std::endl;
+}
+

@@ -5,18 +5,57 @@
 using namespace std;    // or use std:: 
 
 int main() {
+
+    // 1. Initialization
+    std::string str1;                           // Default initialization
+    std::string str2 = "Hello, C++ Strings!";   // Initialization with a literal
+    std::string str3 = str2;                    // Copy initialization
+    std::string str4(5, '!');                   // Initialization with repeated characters: "!!!!!"
+
+    std::cout << "str2: " << str2 << std::endl;
+    std::cout << "str3: " << str3 << std::endl;
+    std::cout << "str4: " << str4 << std::endl;
+
+    // 2. Common Operations
+    str1 = "This is a new value";               // Assignment
+    std::string concatenated = str1 + str4;     // Concatenation
+    std::cout << "Concatenated: " << concatenated << std::endl;
+
+    char firstChar = str2[0];                   // Access using []
+    char secondChar = str2.at(1);               // Access using at()
+    std::cout << "First two characters: " << firstChar << secondChar << std::endl;
+
+    str2.insert(5, " dear");                    // Insertion
+    std::cout << "After insertion: " << str2 << std::endl;
+
+    str2.erase(5, 6);                           // Deletion
+    std::cout << "After erasing: " << str2 << std::endl;
+
+    // 3. Useful Member Functions
+    std::cout << "Length of str2: " << str2.length() << std::endl;
+
+    std::string sub = str2.substr(0, 5);        // Substring
+    std::cout << "Substring: " << sub << std::endl;
+
+    size_t pos = str2.find("C++");              // Finding a substring
+    std::cout << "'C++' is found at position: " << pos << std::endl;
+
+    // 4. Conversion to C-style Strings
+    const char* cstr = str2.c_str();
+    std::cout << "Converted C-style string: " << cstr << std::endl;
+
+
+    // string s0;
+    // string s1 {"Apple"};
+    // string s2 {"Banana"};
+    // string s3 {"Kiwi"};
+    // string s4 {"apple"};
+    // string s5 {s1};         // Apple
+    // string s6 {s1, 0, 3};   // App
+    // string s7 (10, 'X');    // XXXXXXXXXX
     
-    string s0;
-    string s1 {"Apple"};
-    string s2 {"Banana"};
-    string s3 {"Kiwi"};
-    string s4 {"apple"};
-    string s5 {s1};         // Apple
-    string s6 {s1, 0, 3};   // App
-    string s7 (10, 'X');    // XXXXXXXXXX
-    
-    cout << s0 << endl;                  // No garbage
-    cout << s0.length() << endl;     // empty string
+    // cout << s0 << endl;                  // No garbage
+    // cout << s0.length() << endl;     // empty string
     
 // Initialization
 //    cout << "\nInitialization" << "\n------------------------------------------" << endl;

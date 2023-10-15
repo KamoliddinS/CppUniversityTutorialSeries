@@ -4,14 +4,52 @@
 
 using namespace std;    
 
-int main()
-{
-    char first_name[20];
-    char last_name[20] {};
-    char full_name[50] {};
-    char temp[50] {};
+
+int main() {
+    // 1. Initialization of C-style strings
+    char hello[] = "Hello, World!";
+    char greeting[20] = {'H', 'e', 'l', 'l', 'o', '\0'}; // Notice the null terminator
+    const char* pointerGreeting = "Hello using pointer";  // Read-only
+
+    std::cout << "String hello: " << hello << std::endl;
+    std::cout << "String greeting: " << greeting << std::endl;
+    std::cout << "String pointerGreeting: " << pointerGreeting << std::endl;
+
+    // 2. Calculating length
+    std::cout << "Length of hello: " << strlen(hello) << std::endl;
+
+    // 3. Concatenation
+    char destination[50] = "This is ";
+    char source[] = "a concatenated string.";
+    strcat(destination, source);  // destination now contains the concatenated result
+    std::cout << "After concatenation: " << destination << std::endl;
+
+    // 4. Comparison
+    char first[] = "apple";
+    char second[] = "banana";
+    if(strcmp(first, second) < 0) {
+        std::cout << "String 'first' comes before string 'second' lexicographically." << std::endl;
+    } else if(strcmp(first, second) == 0) {
+        std::cout << "String 'first' is identical to string 'second'." << std::endl;
+    } else {
+        std::cout << "String 'first' comes after string 'second' lexicographically." << std::endl;
+    }
+
+    // 5. Copying
+    char original[] = "Original string.";
+    char copied[50];
+    strcpy(copied, original);
+    std::cout << "Copied string: " << copied << std::endl;
+
+
+
+
+    // char first_name[20];
+    // char last_name[20] {};
+    // char full_name[50] {};
+    // char temp[50] {};
     
-    cout << first_name;     // Will likely display garbage!
+    // cout << first_name;     // Will likely display garbage!
 
 //    cout << "Please enter your first name: ";
 //    cin >> first_name;

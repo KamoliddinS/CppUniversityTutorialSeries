@@ -5,7 +5,7 @@
 
 // Function Prototypes
 void modifyValue(int& x);
-void display(const std::string& str);
+void display( std::string& str);
 void swap(int& a, int& b);
 
 int main() {
@@ -23,6 +23,8 @@ int main() {
     std::string message = "Hello, World!";
     display(message);   // Displaying string without modifying it
 
+    std::cout<< message<< std::endl;
+
     // Swapping two values using Pass By Reference
     int a = 10, b = 20;
     std::cout << "\nBefore Swapping - a: " << a << ", b: " << b << std::endl;
@@ -38,7 +40,9 @@ void modifyValue(int& x) {
     x *= 2;  // Double the value
 }
 
-void display(const std::string& str) {
+void display( std::string &str) {
+
+    str = "some dumm";
     std::cout << str << std::endl;
 }
 

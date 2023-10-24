@@ -17,32 +17,32 @@ int main() {
     std::cout << "str4: " << str4 << std::endl;
 
     // 2. Common Operations
-    str1 = "This is a new value";               // Assignment
-    std::string concatenated = str1 + str4;     // Concatenation
-    std::cout << "Concatenated: " << concatenated << std::endl;
+    // str1 = "This is a new value";               // Assignment
+    // std::string concatenated = str1 + str4;     // Concatenation
+    // std::cout << "Concatenated: " << concatenated << std::endl;
 
-    char firstChar = str2[0];                   // Access using []
-    char secondChar = str2.at(1);               // Access using at()
-    std::cout << "First two characters: " << firstChar << secondChar << std::endl;
+    // char firstChar = str2[0];                   // Access using []
+    // char secondChar = str2.at(0);               // Access using at()
+    // std::cout << "First two characters: " << firstChar << secondChar << std::endl;
 
-    str2.insert(5, " dear");                    // Insertion
-    std::cout << "After insertion: " << str2 << std::endl;
+    // str2.insert(5, " dear");                    // Insertion
+    // std::cout << "After insertion: " << str2 << std::endl;
 
-    str2.erase(5, 6);                           // Deletion
-    std::cout << "After erasing: " << str2 << std::endl;
+    // str2.erase(5, 6);                           // Deletion
+    // std::cout << "After erasing: " << str2 << std::endl;
 
     // 3. Useful Member Functions
-    std::cout << "Length of str2: " << str2.length() << std::endl;
+    // std::cout << "Length of str2: " << str2.size() << std::endl;
 
-    std::string sub = str2.substr(0, 5);        // Substring
-    std::cout << "Substring: " << sub << std::endl;
+    // std::string sub = str2.substr(0, 5);        // Substring
+    // std::cout << "Substring: " << sub << std::endl;
 
-    size_t pos = str2.find("C++");              // Finding a substring
-    std::cout << "'C++' is found at position: " << pos << std::endl;
+    // size_t pos = str2.find("C++");              // Finding a substring
+    // std::cout << "'C++' is found at position: " << pos << std::endl;
 
-    // 4. Conversion to C-style Strings
-    const char* cstr = str2.c_str();
-    std::cout << "Converted C-style string: " << cstr << std::endl;
+    // // 4. Conversion to C-style Strings
+    // const char* cstr = str2.c_str();
+    // std::cout << "Converted C-style string: " << cstr << std::endl;
 
 
     // string s0;

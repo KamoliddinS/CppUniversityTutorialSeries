@@ -36,7 +36,7 @@ returnType functionName(dataType parameter = defaultValue) {
 1. **Basic Default Argument**
 
 ```c++
-void greet(std::string name = "Guest") {
+void greet(std::string name = "Guest" ) {
     std::cout << "Hello, " << name << "!" << std::endl;
 }
 ```

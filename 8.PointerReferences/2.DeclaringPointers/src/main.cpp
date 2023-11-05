@@ -1,35 +1,51 @@
 #include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
 
 int main() {
-    // What is a Pointer?
-    std::cout << "---- What is a Pointer? ----" << std::endl;
+    
+    int num{10};
+    cout << "Value of num is: " << num << endl;		
+    cout << "sizeof of num is: " << sizeof num << endl; 	
+    cout << "Address of num is: " << &num << endl;	 	
 
-    // Declaring an integer and a pointer
-    int var = 42;
-    int* p;
+//    int *p;
+//    cout << "\nValue of p is: " << p << endl;   // garbage
+//    cout << "Address of p is: " << &p << endl;
+//    cout << "sizeof of p is: " << sizeof p<< endl;
+//    
+//    p = nullptr;
+//    cout << "\nValue of p is: " << p << endl;
 
-    // Syntax for Declaring Pointers
-    std::cout << "Address of var: " << &var << std::endl;
 
-    // Pointer Initialization
-    p = &var;
-    std::cout << "Pointer p points to the address: " << p << std::endl;
-    std::cout << "Value at the address pointed by p: " << *p << std::endl;
+//    int *p1 {nullptr};
+//    double *p2 {nullptr};
+//    unsigned long long *p3 {nullptr};
+//    vector<string>  *p4{nullptr};
+//    string *p5 {nullptr};
+//    
+//    cout << "\nsizeof p1 is: " << sizeof p1 << endl;
+//    cout << "sizeof p2 is: " << sizeof p2 << endl;
+//    cout << "sizeof p3 is: " << sizeof p3 << endl;
+//    cout << "sizeof p4 is: " << sizeof p4 << endl;
+//    cout << "sizeof p5 is: " << sizeof p5 << endl;
+    
+//    int score{10};
+//    double high_temp{100.7};
+//    
+//    int *score_ptr {nullptr};
+//    
+//    score_ptr = &score;
+//    cout << "Value of score is: " << score << endl;
+//    cout << "Address of score is: " << &score << endl;
+//    cout << "Value of score_ptr is: " << score_ptr << endl;
+//
+//   // score_ptr = &high_temp;     // Compiler error
 
-    // Null Pointers
-    int* nullPointer = nullptr;
-    if (nullPointer == nullptr) {
-        std::cout << "nullPointer is initialized to nullptr and points to: " << nullPointer << std::endl;
-    } else {
-        std::cout << "Value at the address pointed by nullPointer: " << *nullPointer << std::endl; // This should not be executed.
-    }
-
-    // Key Takeaways
-    std::cout << "---- Key Takeaways ----" << std::endl;
-    std::cout << "1. Pointers store memory addresses, allowing for indirect variable access." << std::endl;
-    std::cout << "2. Use the * symbol to declare a pointer and the & symbol to get the address of a variable." << std::endl;
-    std::cout << "3. A pointer should be initialized either to an address or to nullptr to avoid undefined behavior." << std::endl;
-    std::cout << "4. Dereferencing a pointer gives the value stored at the memory address it points to." << std::endl;
-
+    cout  << endl;
     return 0;
 }
+
+

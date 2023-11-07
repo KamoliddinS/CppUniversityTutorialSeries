@@ -26,7 +26,6 @@ Functions are fundamental building blocks in any programming language. They allo
 
 Here's a link to metaphors that help you understand functions better: [Metaphorical Insights](./METAPHORICAL_INSIGHTS.md)
 
-[📖 Read more about Introduction to Functions](./introduction_to_functions.md)
 
 ---
 ### Function Definitions

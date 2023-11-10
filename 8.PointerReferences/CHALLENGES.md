@@ -24,3 +24,6 @@
 **Task:** Create an array of function pointers where each function performs a different arithmetic operation (e.g., add, subtract, multiply, divide) and a menu to test each function.
 
 
+### Challange 9: Single Linked list
+**Task** Implement a singly linked list with operations to add and remove elements. Use pointers to manipulate the nodes of the list. Provide functions for printing the list, adding an element at the end, and removing a specified element.
+

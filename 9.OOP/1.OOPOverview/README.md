@@ -21,3 +21,5 @@ Polymorphism gives us the power to interact with different objects through a com
 ### 🤖 Abstraction - Simplifying Complexity
 Abstraction is the art of simplifying complexity by modeling classes appropriate to the problem, providing a clear separation between what something does and how it's accomplished.
 
+
+

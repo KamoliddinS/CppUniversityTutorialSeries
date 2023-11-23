@@ -1,74 +1,60 @@
+
+// Move Constructor 
 #include <iostream>
 #include <vector>
 
-// A class that contains a dynamic array
-class DynamicArray {
+using namespace std;
+
+class Move {
 private:
-    int* data;
-    size_t length;
-
+    int *data;
 public:
-    // Standard constructor that allocates memory for the array
-    DynamicArray(size_t len) : length(len), data(new int[len]) {
-        std::cout << "Constructor allocating " << length << " integers." << std::endl;
-    }
-
-    // Move constructor that takes an rvalue reference to another DynamicArray
-    DynamicArray(DynamicArray&& other) noexcept
-        : data(nullptr), length(0) {
-        std::cout << "Move constructor invoked." << std::endl;
-
-        // Transfer ownership of the data from the source object
-        data = other.data;
-        length = other.length;
-
-        // Leave the source object in a safe state to avoid double free during destruction
-        other.data = nullptr;
-        other.length = 0;
-    }
-
-    // Destructor to free the allocated memory
-    ~DynamicArray() {
-        std::cout << "Destructor freeing data." << std::endl;
-        delete[] data;
-    }
-
-    // A method to print the array's elements
-    void print() const {
-        for (size_t i = 0; i < length; ++i) {
-            std::cout << data[i] << ' ';
-        }
-        std::cout << std::endl;
-    }
-
-    // Disable copy operations to enforce move semantics
-    DynamicArray(const DynamicArray&) = delete;
-    DynamicArray& operator=(const DynamicArray&) = delete;
+    void set_data_value(int d) { *data = d; }
+    int get_data_value() { return *data; }
+    // Constructor
+    Move(int d);
+    // Copy Constructor
+    Move(const Move &source);
+    // Move Constructor
+    // Move(Move &&source) noexcept;
+    // Destructor
+    ~Move();
 };
-
-// Function to generate a temporary DynamicArray
-DynamicArray createArray(size_t len) {
-    DynamicArray temp(len);
-    for (size_t i = 0; i < len; ++i) {
-        // Initialize array with some values
-        // For simplicity we're just using the index as the value
-        temp.print(); // Just for demonstration purposes
-    }
-    return temp; // This will invoke the move constructor
+ Move::Move(int d)  {
+    data = new int;
+    *data = d;
+    cout << "Constructor for: " << d << endl;
 }
-
+// Copy ctor
+Move::Move(const Move &source)
+    : Move {*source.data} {
+        cout << "Copy constructor  - deep copy for: " << *data << endl;
+}
+// //Move ctor
+// Move::Move(Move &&source) noexcept 
+//     : data {source.data} {
+//         source.data = nullptr;
+//         cout << "Move constructor - moving resource: " << *data << endl;
+// }
+Move::~Move() {
+    if (data != nullptr) {
+        cout << "Destructor freeing data for: " << *data << endl;
+    } else {
+        cout << "Destructor freeing data for nullptr" << endl;
+    }
+    delete data;
+}
 int main() {
-    size_t arraySize = 10;
+    vector<Move> vec;
 
-    // Create an array with 'arraySize' elements
-    DynamicArray arr = createArray(arraySize);
-
-    // The contents of 'arr' are now the moved resources from the temporary array
-    std::cout << "Array after move:" << std::endl;
-    arr.print();
-
-    // No need to manually delete anything, the destructor will be called
-    // for 'arr' when it goes out of scope, freeing the resources
+    vec.push_back(Move{10});
+    vec.push_back(Move{20});
+    vec.push_back(Move{30});
+    vec.push_back(Move{40});
+    vec.push_back(Move{50});
+    vec.push_back(Move{60});
+    vec.push_back(Move{70});
+    vec.push_back(Move{80});
 
     return 0;
 }

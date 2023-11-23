@@ -60,6 +60,8 @@ int main() {
     const Circle smallCircle(5);
     std::cout << "Area of small circle: " << smallCircle.area() << std::endl;
 
+    smallCircle.setRadius(3); // Compile error: member function is not marked const
+
     Circle bigCircle(10);
     std::cout << "Area of big circle: " << bigCircle.area() << std::endl;
     bigCircle.setRadius(12);

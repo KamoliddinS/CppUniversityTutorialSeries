@@ -1,47 +1,58 @@
 #include <iostream>
-
+#include <string>
 using namespace std;
 
-class House{
-    private:
-        int rooms; 
-        int doors; 
-        int windows;
-        bool isDoorOpen;
-    
-    public: 
-        House(int numberOfRooms, int numberOfDoors, int numberOfwindows){
-            rooms = numberOfRooms;
-            doors = numberOfDoors;
-            windows = numberOfwindows;
-            isDoorOpen = false;
-        }
-        void openDoor(){
-            isDoorOpen = true;
-        }
-        void closeDoor(){
-            isDoorOpen = false;
-        }
-        void setRooms(int numberOfRooms){
-            if( numberOfRooms < 0 || numberOfRooms > 20){
-                cout<<"Number of rooms can not be negative or room numbers cannot exceed 20"<<endl;
-            }else{
-                rooms = numberOfRooms;
-            }
-        }
-        int getRooms(){
-            return rooms;
-        }
+// Define the Student class
+class Student {
+    private: 
+        string name;
+        int age;
+        int score;
+        int* p;
+
+    public:
+    // Constructor
+    Student(string n, int a, int s): name(n), age(a), score(s){
+
+        p = new int;
+        *p = 100;
+        cout<< "Constructor called for "<<name<<endl;
+    }
+
+    Student(string n, int a): Student(n, a, 0){}
+
+    Student(): Student("None", 0){}
+
+    void display(){
+        cout<< "-------------"<<endl;
+        cout<< "Name: "<<name<<endl;
+        cout<< "Age: "<<age<<endl;
+        cout<< "Score: "<<score<<endl;
+        cout<< "-------------"<< endl;
+    }
+
+    ~Student(){
+        delete p;
+        cout<< "Destructor called for "<<name<<endl;
+    }
 };
 
-int main() {
 
-    House amalsHouse(3, 2, 4);
-    amalsHouse.setRooms(-1);
-    amalsHouse.setRooms(21);
-    cout<<amalsHouse.getRooms()<<endl;
+
+int main(){
+
+
+    Student jack("jack", 18, 100); 
+    jack.display();
+
+    Student tom("tom", 20);
+    tom.display();
+
+
+    Student jerry;
+    jerry.display();
+
+
     
-    House kamoliddinHouse(4, 3, 5);
-    cout<< kamoliddinHouse.getRooms()<<endl;
-    return 0;
+    return 0; 
 }

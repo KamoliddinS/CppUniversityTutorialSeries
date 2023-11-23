@@ -41,6 +41,20 @@
 
 ---
 
+## Activity x: Array of Objects
+
+**Objective:** Learn how to create an array of objects.
+
+**Task:**
+1. **Create an Array of Objects:**
+   - In the main function, create an array of `Book` objects.
+   - Initialize the array with some values.
+
+2. **Display the Array:**
+   - Write a function to display the details of all the books in the array.
+
+
+
 ## Activity 3: Basic Polymorphism
 
 **Objective:** Understand polymorphism in the context of method overloading.

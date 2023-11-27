@@ -75,6 +75,43 @@ int main() {
 }
 ```
 
+## When is a Move Constructor Called?
+
+1. **Returning an Object from a Function**
+   - When a function returns an object by value, and the return value is either a temporary or its lifetime ends with the function return, the move constructor can be invoked. This is because the returned object is treated as an rvalue and can be moved to the destination.
+
+2. **Initializing an Object with a Temporary (Rvalue)**
+   - When you initialize an object with a temporary value (an rvalue), the move constructor is called. For instance:
+     ```cpp
+     MyClass obj = MyClass();
+     ```
+     In this example, `MyClass()` creates a temporary object, which is then moved into `obj`.
+
+3. **Using `std::move` to Force Move Semantics**
+   - You can explicitly call the move constructor using `std::move`. This standard library function casts an lvalue (an object with a persistent state) to an rvalue reference, allowing the move constructor to be used:
+     ```cpp
+     MyClass a;
+     MyClass b = std::move(a);
+     ```
+     Here, `a` is explicitly moved into `b`.
+
+4. **Inserting or Pushing into Containers**
+   - When adding objects to standard library containers like `std::vector` or `std::map` using `std::move`, the move constructor is called to transfer the object into the container.
+
+5. **Swapping Objects**
+   - The move constructor is used in swapping operations, like in `std::swap`, to efficiently exchange the contents of two objects.
+
+6. **Automatic Move Optimization in Certain Scenarios**
+   - The compiler may automatically use the move constructor in situations where it's safe to do so, such as when an lvalue at the end of its scope is being copied.
+
+### Key Points:
+- Move constructors are typically called for objects that are rvalues.
+- Explicitly calling the move constructor is done via `std::move`.
+- The move constructor is part of C++'s move semantics, introduced in C++11, for more efficient resource management, particularly for objects managing dynamic memory or other resources.
+- Compiler optimizations can sometimes result in move constructors being called even when not explicitly indicated in the code, thanks to Return Value Optimization (RVO) and Named Return Value Optimization (NRVO).
+
+
+
 ## Conclusion
 
 Move constructors are a powerful tool in C++ to optimize the performance of your programs by eliminating unnecessary copies. They allow resources to be 'moved' rather than 'copied', which can significantly speed up operations involving temporary objects or objects that are about to go out of scope.

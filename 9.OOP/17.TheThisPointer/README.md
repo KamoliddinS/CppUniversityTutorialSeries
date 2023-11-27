@@ -23,7 +23,6 @@ public:
     void setAttribute(int attribute) {
         this->attribute = attribute; // 'this->attribute' refers to the member, 'attribute' refers to the parameter
     }
-
     // An example where 'this' is used to return the object itself from a method:
     ClassName& returnSelf() {
         return *this; // Dereferences 'this' to return the object

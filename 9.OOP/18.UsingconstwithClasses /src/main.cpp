@@ -1,9 +1,13 @@
 #include <iostream>
 
+using std::string;
+
 class Rectangle {
 private:
     const double length; // const member variable
     const double width;  // const member variable
+
+    string name;
 
 public:
     // Constructor with initializer list to set the const members
@@ -11,7 +15,7 @@ public:
 
     // A const member function that calculates the area of the rectangle.
     // This function does not modify any member variables.
-    double area() const {
+    double area()  {
         return length * width;
     }
 
@@ -29,6 +33,10 @@ public:
     // Accessor for width that does not modify the object
     double getWidth() const {
         return width;
+    }
+
+    double setName(string n) {
+        name = n;
     }
 
     // This function attempts to modify a const member variable, which is illegal
@@ -49,6 +57,11 @@ int main() {
 
     // Attempting to change the rectangle's dimensions is not allowed by the class design
     // rect.setLength(20.0); // Uncommenting this will result in a compile error
+
+
+    // Rectangle const rect2(10.0, 5.0); // Create a Rectangle object
+    // rect2.setName("rect2");
+
 
     return 0;
 }

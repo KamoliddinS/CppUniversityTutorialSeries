@@ -1,58 +1,43 @@
 #include <iostream>
-#include <string>
-using namespace std;
 
-// Define the Student class
-class Student {
-    private: 
-        string name;
-        int age;
-        int score;
-        int* p;
+class Account {
+private:
+    // Non-static member variable
+    double balance;
+    
+    // Static member variable
+    static int accountCount;
 
-    public:
+public:
     // Constructor
-    Student(string n, int a, int s): name(n), age(a), score(s){
-
-        p = new int;
-        *p = 100;
-        cout<< "Constructor called for "<<name<<endl;
+    Account(double initialBalance) : balance(initialBalance) {
+        // Increment the static member variable for every new object created
+        accountCount++;
     }
 
-    Student(string n, int a): Student(n, a, 0){}
-
-    Student(): Student("None", 0){}
-
-    void display(){
-        cout<< "-------------"<<endl;
-        cout<< "Name: "<<name<<endl;
-        cout<< "Age: "<<age<<endl;
-        cout<< "Score: "<<score<<endl;
-        cout<< "-------------"<< endl;
+    // Static member function
+    static int getAccountCount() {
+        // Access the static member variable
+        return accountCount;
     }
 
-    ~Student(){
-        delete p;
-        cout<< "Destructor called for "<<name<<endl;
+    // Regular member function
+    void deposit(double amount) {
+        balance += amount;
     }
 };
 
+// Initialize the static member variable
+int Account::accountCount = 0;
 
-
-int main(){
-
-
-    Student jack("jack", 18, 100); 
-    jack.display();
-
-    Student tom("tom", 20);
-    tom.display();
-
-
-    Student jerry;
-    jerry.display();
-
+int main() {
+    Account a1(100.0);
+    Account a2(150.0);
+    
+    // Output the number of accounts created
+    std::cout << "Total accounts: " << Account::getAccountCount() << std::endl;
 
     
-    return 0; 
+
+    return 0;
 }

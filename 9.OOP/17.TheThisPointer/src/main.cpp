@@ -30,6 +30,11 @@ public:
     void introduceSelf() const {
         std::cout << "Hello, I am " << this->name << " and I am " << this->age << " years old." << std::endl;
     }
+
+    // print this pointer
+    void printThisPointer(){
+        std::cout << "this pointer: " << this << std::endl;
+    }
 };
 
 int main() {
@@ -41,6 +46,14 @@ int main() {
 
     // Calling introduceSelf to display the person's name and age
     person.introduceSelf();
+
+
+    //print this pointer
+    std::cout << "this pointer: " << &person << std::endl;
+
+    //print this pointer
+    person.printThisPointer();
+
 
     return 0;
 }

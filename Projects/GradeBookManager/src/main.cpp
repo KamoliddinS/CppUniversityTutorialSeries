@@ -68,7 +68,7 @@ int main()
         default:
             cout << "Invalid choice!";
         }
-    } while (choice != 6);
+    } while (choice != 7);
 
     return 0;
 }

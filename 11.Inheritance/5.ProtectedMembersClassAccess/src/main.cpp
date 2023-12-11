@@ -51,8 +51,8 @@ int main() {
 
     // Setting protectedValue through a public method of the base class
     pubDerived.setProtectedValue(10);
-    protDerived.setProtectedValue(20);
-    privDerived.setProtectedValue(30);
+    // protDerived.setProtectedValue(20); // Note: this is not accessible for protected inheritance
+    // privDerived.setProtectedValue(30); // Note: this is not accessible for private inheritance
 
     // Displaying protectedValue through a method of the derived class
     pubDerived.display();  // Output: Protected Value (PublicDerived): 10

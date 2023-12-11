@@ -57,7 +57,6 @@ public:
     }
 };
 
-// Main function to demonstrate Inheritance vs Composition
 int main() {
     std::cout << "Inheritance Example:\n";
     Dog myDog; // Dog is an Animal

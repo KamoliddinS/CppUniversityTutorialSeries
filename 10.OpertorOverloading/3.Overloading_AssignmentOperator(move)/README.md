@@ -26,6 +26,7 @@ The move assignment operator takes an rvalue reference to an object of the same 
 
 Below is a simple example of a move assignment operator for a hypothetical `Widget` class.
 
+
 ```cpp
 #include <utility> // For std::move
 

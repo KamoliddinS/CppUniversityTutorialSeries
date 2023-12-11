@@ -26,7 +26,7 @@ Point operator+(const Point& lhs, const Point& rhs) {
 // Global operator function to overload the '<<' operator for Point objects
 std::ostream& operator<<(std::ostream& os, const Point& p) {
     // Write the Point to the output stream
-    os << "(" << p.getX() << ", " << p.getY() << ")";
+    os << "(" << p.x << ", " << p.y << ")";
     return os;
 }
 

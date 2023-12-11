@@ -5,16 +5,21 @@ class Vector2D {
 public:
     float x, y;
 
+    // Default constructor
+    Vector2D() : x(0.0f), y(0.0f) {}
+
     // Constructor to initialize the vector
     Vector2D(float x, float y) : x(x), y(y) {}
 
     // Overloading the unary '+' operator
     Vector2D operator+() const {
+        std::cout << "Unary operator " << std::endl;
         return *this; // Returns a copy of the current object
     }
 
     // Overloading the binary '+' operator to add two vectors
     Vector2D operator+(const Vector2D& rhs) const {
+        std::cout << "Binary operator " << std::endl;
         return Vector2D(x + rhs.x, y + rhs.y);
     }
 
@@ -30,6 +35,7 @@ public:
 
     // Overloading the assignment '=' operator
     Vector2D& operator=(const Vector2D& rhs) {
+        std::cout<<"Assignment operator "<<std::endl;
         if (this != &rhs) { // Check for self-assignment
             x = rhs.x;
             y = rhs.y;
@@ -62,8 +68,12 @@ int main() {
     std::cout << "vec1 and vec3 are " << (vec1 != vec3 ? "not equal" : "equal") << std::endl;
 
     // Demonstrate '=' operator
-    Vector2D vec5 = vec2; // Using copy assignment
+    Vector2D vec5 = vec2; // Using Copy constructor
     vec5.print();
+
+    Vector2D vec6;
+    vec6 = vec2; // Using assignment operator
+    vec6.print();
 
     return 0;
 }

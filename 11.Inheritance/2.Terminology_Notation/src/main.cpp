@@ -6,6 +6,7 @@ class Animal {
 public:
     Animal() { std::cout << "An animal has been created\n"; }
     virtual ~Animal() { std::cout << "An animal has been destroyed\n"; }
+    //virtual means that the function can be overridden by a derived class
 
     // Virtual function to be overridden by the derived class
     virtual void speak() const {

@@ -11,7 +11,7 @@ public:
     // parameter names and member variable names
     Person(std::string name, int age) {
         this->name = name;
-        this->age = age;
+        age = age;
     }
 
     // A method that returns a reference to the instance itself to allow chaining

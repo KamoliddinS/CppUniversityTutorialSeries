@@ -1,43 +1,59 @@
 #include <iostream>
 
-class Account {
-private:
-    // Non-static member variable
-    double balance;
-    
-    // Static member variable
-    static int accountCount;
+using namespace std;
+
+
+class AA;
+
+class Student{
+private: //by default everything is private
+    string name; 
+    int age; 
+    int student_id; 
 
 public:
-    // Constructor
-    Account(double initialBalance) : balance(initialBalance) {
-        // Increment the static member variable for every new object created
-        accountCount++;
-    }
 
-    // Static member function
-    static int getAccountCount() {
-        // Access the static member variable
-        return accountCount;
-    }
+    Student( string name, int a, int id): name(name), age(a), student_id(id){
+    };
 
-    // Regular member function
-    void deposit(double amount) {
-        balance += amount;
+    friend void display(Student &s); //friend function can access private members of a class
+
+    friend class AA; 
+};
+
+
+class AA{
+
+public:
+
+    void display(Student &s){
+
+        cout << s.name << endl;
+        cout << s.age << endl;
+        cout << s.student_id << endl;
+
     }
 };
 
-// Initialize the static member variable
-int Account::accountCount = 0;
+void display(Student &s){
+
+    cout << s.name << endl;
+    cout << s.age << endl;
+    cout << s.student_id << endl;
+
+}
+
 
 int main() {
-    Account a1(100.0);
-    Account a2(150.0);
     
-    // Output the number of accounts created
-    std::cout << "Total accounts: " << Account::getAccountCount() << std::endl;
+    Student s1("John", 20, 1234);
 
+    display(s1);
     
+
+    AA a1;
+    a1.display(s1);
+
 
     return 0;
 }

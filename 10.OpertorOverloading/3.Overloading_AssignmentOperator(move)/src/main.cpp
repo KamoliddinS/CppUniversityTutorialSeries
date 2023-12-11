@@ -16,7 +16,9 @@ public:
     }
 
     // Move constructor
-    Widget(Widget&& other) noexcept : data_(other.data_), size_(other.size_) {
+    Widget(Widget&& other){
+        data_= other.data_; 
+        size_= other.size_;
         other.data_ = nullptr;
         other.size_ = 0;
         std::cout << "Widget moved via move constructor." << std::endl;
@@ -28,7 +30,6 @@ public:
         if (this != &other) { // Guard against self-assignment
             // Release any existing resources
             delete[] data_;
-
             // Transfer ownership of resources
             data_ = other.data_;
             size_ = other.size_;
@@ -63,6 +64,8 @@ int main() {
     widgetB.print();
 
     // Move assignment - resources are moved from widgetB to widgetA
+    //first we create a temporary object by calling the move constructor
+    //then we call the move assignment operator
     widgetA = std::move(widgetB);
 
     std::cout << "After move assignment:" << std::endl;

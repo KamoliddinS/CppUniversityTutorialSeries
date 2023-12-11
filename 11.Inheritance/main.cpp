@@ -1,25 +1,103 @@
-#include <iostream>
+#include <iostream> 
+#include <vector>
 
-class Animal {
+using namespace std;
+
+class Engine{
     private:
-        int weight;
-        int height;
+        int fuel;
+        int silinder;
+        float capacity;
     
+
     public:
-        Animal(int weight = 0, int height = 0) : weight(weight), height(height) {}
-        virtual int getWeight() const { return weight; }
-        int getHeight() const { return height; }
-        void setWeight(int weight) { this->weight = weight; }
-        void setHeight(int height) { this->height = height; }
+
+        Engine(){
+            fuel = 0;
+            silinder = 0;
+            capacity = 0;
+        }
+        Engine(int fuel, int silinder, float capacity){
+            this->fuel = fuel;
+            this->silinder = silinder;
+            this->capacity = capacity;
+        }
+
+        void start(){
+            std::cout << "Engine started" << std::endl;
+        }
 };
 
-class Dog : public Animal { 
-        private:
-        std::string name;
-    
-    public:
-        Dog(std::string name = "", int weight = 0, int height = 0) : Animal(weight, height), name(name) {}
-        std::string getName() const { return name; }
+class Tire{
+    private:
+        int diameter;
+        int width;
 
-        int getWeight() const override{ return Animal::getWeight(); }
+    public:
+        Tire(int diameter, int width){
+            this->diameter = diameter;
+            this->width = width;
+        }
+
+        void roll(){
+            std::cout << "Tire is rolling" << std::endl;
+        }
 };
+
+class Seat{
+    private:
+        int material;
+        int color;
+
+    public:
+        Seat(int material, int color){
+            this->material = material;
+            this->color = color;
+        }
+
+        void sit(){
+            std::cout << "Sitting on the seat" << std::endl;
+        }
+};
+
+class Car{
+    private:
+        Engine engine;
+        vector<Tire> tires;
+        vector<Seat> seats;
+
+
+    public:
+        Car( int fuelConsumption, int numberOfSillinders, float capacity, int numberOfTires, int numberOfSeats){
+            
+            engine = Engine(fuelConsumption, numberOfSillinders, capacity);
+
+
+            // this is initialization of tires for the car
+            for (int i = 0; i < numberOfTires; i++){
+                Tire tire(10, 10);
+                tires.push_back(tire);
+            }
+
+            // this is initialization of seats for the car
+            for (int i = 0; i < numberOfSeats; i++){
+                Seat seat(10, 10);
+                seats.push_back(seat);
+            }
+
+        }
+
+        void drive(){
+            engine.start();
+            for (int i = 0; i < tires.size(); i++){
+                tires[i].roll();
+            }
+            std::cout << "Driving the car" << std::endl;
+        }
+};
+
+int main(){
+    Car car(10, 4, 10, 4, 4);
+    car.drive();
+    return 0;
+}

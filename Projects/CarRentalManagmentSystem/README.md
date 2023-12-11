@@ -39,3 +39,8 @@ make all
 ./CarRentalManagmentSystem
 
 ```
+
+### Compile with G++:
+```
+g++ -std=c++17 -Iincludes src/main.cpp  src/Car.cpp src/CarRentalSystem.cpp src/Customer.cpp  -o CarRentalSysteme
+```

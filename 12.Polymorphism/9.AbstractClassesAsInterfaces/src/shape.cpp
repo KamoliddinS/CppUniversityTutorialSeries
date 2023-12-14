@@ -1,4 +1,3 @@
-
 // Pure virtual functions and abstract base classes
 #include <iostream>
 #include <vector>

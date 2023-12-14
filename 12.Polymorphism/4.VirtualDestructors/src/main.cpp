@@ -1,5 +1,6 @@
 // Filename: VirtualDestructorsDemo.cpp
 // Compile with: g++ VirtualDestructorsDemo.cpp -o VirtualDestructorsDemo
+// GOLDEN RULE IF YOU HAVE ONE VIRTUAL FUNCTION ALWAYS SPECIFY THAT CLASSES DISTRUCTOR AS VIRTUAL
 
 #include <iostream>
 

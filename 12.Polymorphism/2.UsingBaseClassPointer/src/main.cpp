@@ -1,63 +1,81 @@
-// Filename: main.cpp
-// Compile with: g++ main.cpp -o polymorphism_example
+// Using Base class pointers
 
 #include <iostream>
 #include <vector>
 
-// Abstract base class
-class Polygon {
+// This class uses dynamic polymorphism for the withdraw method
+// We'll learn about virtual functions in the next video
+class Account {
 public:
-    // Virtual function to be overridden by derived classes
-    virtual void draw() const = 0; // Pure virtual function makes this class abstract
-
-    // Virtual destructor to ensure derived class destructors are called
-    virtual ~Polygon() {
-        std::cout << "Cleaning up Polygon." << std::endl;
+    virtual void withdraw(double amount) {
+        std::cout << "In Account::withdraw" << std::endl;
     }
+    virtual ~Account() {  }
 };
 
-// Derived class - Triangle
-class Triangle : public Polygon {
+class Checking: public Account  {
 public:
-    void draw() const override {
-        std::cout << "Drawing Triangle" << std::endl;
+    virtual void withdraw(double amount) {
+        std::cout << "In Checking::withdraw" << std::endl;
     }
-
-    ~Triangle() {
-        std::cout << "Cleaning up Triangle." << std::endl;
-    }
+    
+    virtual ~Checking() {  }
 };
 
-// Derived class - Rectangle
-class Rectangle : public Polygon {
+class Savings: public Account  {
 public:
-    void draw() const override {
-        std::cout << "Drawing Rectangle" << std::endl;
+    virtual void withdraw(double amount) {
+        std::cout << "In Savings::withdraw" << std::endl;
     }
+    virtual ~Savings() {  }
+};
 
-    ~Rectangle() {
-        std::cout << "Cleaning up Rectangle." << std::endl;
+class Trust: public Account  {
+public:
+    virtual void withdraw(double amount) {
+        std::cout << "In Trust::withdraw" << std::endl;
     }
+    virtual ~Trust() {  }
 };
 
 int main() {
-    // Vector of base class pointers
-    std::vector<Polygon*> polygons;
+    std::cout << "\n === Pointers ==== " << std::endl;
+    Account *p1 = new Account(); // as far as it is dynmaically allocated in the heap we have to clean up later on 
+    Account *p2 = new Savings();
+    Account *p3 = new Checking();
+    Account *p4 = new Trust();
+    
+    p1->withdraw(1000);
+    p2->withdraw(1000);
+    p3->withdraw(1000);
+    p4->withdraw(1000);
+    
+    std::cout << "\n === Array ==== " << std::endl;
+    Account *array [] = {p1,p2,p3,p4};
+    for (auto i=0; i<4; ++i)
+        array[i]->withdraw(1000);
+        
+    std::cout << "\n === Array ==== " << std::endl;
+    array[0] = p4;
+    for (auto i=0; i<4; ++i)
+        array[i]->withdraw(1000);
 
-    // Adding derived class instances to the vector
-    polygons.push_back(new Triangle());
-    polygons.push_back(new Rectangle());
+    std::cout << "\n === Vector ==== " << std::endl;
+    std::vector<Account *> accounts {p1,p2,p3,p4};
+    for (auto acc_ptr: accounts)
+        acc_ptr->withdraw(1000);
+        
+    std::cout << "\n === Vector ==== " << std::endl;
+    accounts.push_back(p4);
+    accounts.push_back(p4);
+    for (auto acc_ptr: accounts)
+        acc_ptr->withdraw(1000);
 
-    // Iterate through the vector and invoke the draw method
-    // The specific method called is determined at runtime
-    for (Polygon* poly : polygons) {
-        poly->draw();
-    }
-
-    // Clean up
-    for (Polygon* poly : polygons) {
-        delete poly; // This will invoke the appropriate destructor
-    }
-
+    std::cout << "\n === Clean up ==== " << std::endl;
+    delete p1;
+    delete p2;
+    delete p3;
+    delete p4;
+        
     return 0;
 }

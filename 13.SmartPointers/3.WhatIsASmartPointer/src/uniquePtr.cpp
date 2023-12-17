@@ -11,6 +11,7 @@ public:
 void useUniquePointer() {
     std::unique_ptr<Resource> uniquePtr = std::make_unique<Resource>();
     uniquePtr->sayHello();
+    
     // Resource is automatically released when uniquePtr goes out of scope
 }
 

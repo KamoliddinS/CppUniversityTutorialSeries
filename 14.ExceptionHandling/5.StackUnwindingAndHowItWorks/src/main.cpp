@@ -35,6 +35,7 @@ void functionA() {
         std::cout << "Exception caught in functionA: " << e.what() << '\n';
         // Stack unwinding has completed when this block is executed
     }
+    throw std::runtime_error("Another error from funciton A");
 }
 
 int main() {

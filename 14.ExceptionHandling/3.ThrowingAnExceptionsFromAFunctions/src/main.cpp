@@ -20,6 +20,7 @@ void processInput(int input) {
         throw std::runtime_error("Runtime error: Input must not be zero.");
     }
     // If input is valid, print it
+        
     std::cout << "Processing input: " << input << std::endl;
 }
 

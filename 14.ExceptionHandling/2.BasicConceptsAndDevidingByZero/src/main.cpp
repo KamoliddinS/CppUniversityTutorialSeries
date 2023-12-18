@@ -18,7 +18,7 @@ double safe_divide(double numerator, double denominator) {
 int main() {
     // Variables to store the numerator and denominator
     double numerator = 10.0;
-    double denominator = 0.0;
+    double denominator = 2.0;
 
     // Try block contains code that might throw an exception
     try {

@@ -48,7 +48,3 @@ We provided an example of implementing class-level exceptions, which are excepti
 
 Lastly, we explored the hierarchy of standard exception classes provided by the C++ standard library. We discussed how to use these built-in exceptions and how to extend them with custom exception classes for application-specific error handling.
 [Read more about The C++ `std::exception` Class Hierarchy](./8.TheC++std::exceptionsClassHierarchy/README.md)
----
-
-Feel free to explore each section in detail to gain a comprehensive understanding of exception handling in C++. This overview serves as a reference guide to the various aspects of C++ exception handling that we've covered, and the corresponding code examples demonstrate practical implementation strategies.
-

@@ -1,0 +1,7 @@
+[package]
+name = "comments_example"
+version = "0.1.0"
+edition = "2021"
+description = "Comments and documentation examples in Rust"
+
+[dependencies]

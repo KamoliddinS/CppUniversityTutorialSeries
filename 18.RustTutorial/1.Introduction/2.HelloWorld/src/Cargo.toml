@@ -1,0 +1,7 @@
+[package]
+name = "hello_world"
+version = "0.1.0"
+edition = "2021"
+description = "Hello World example in Rust"
+
+[dependencies]

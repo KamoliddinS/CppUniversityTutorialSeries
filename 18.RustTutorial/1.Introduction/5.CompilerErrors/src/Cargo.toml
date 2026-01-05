@@ -1,0 +1,7 @@
+[package]
+name = "compiler_errors_example"
+version = "0.1.0"
+edition = "2021"
+description = "Examples of correct code that avoids common Rust compiler errors"
+
+[dependencies]

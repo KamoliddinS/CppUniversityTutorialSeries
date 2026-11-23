@@ -1,112 +1,94 @@
+# C++ course
 
-# C++ Course Overview
+A first programming course in C++, taught at Central Asian University.
 
-Welcome to the comprehensive Computer Programming with  C++ course designed to take you through the intricacies of the C++ programming language. This course is structured into individual lessons, each focusing on specific topics to provide a thorough understanding of C++.
+It starts from zero: no programming experience is needed. Every lesson is one short page
+with a small program you can build and run, and every chapter ends with exercises that
+check themselves.
 
-## Course Structure
+## Start here
 
-The course is organized into separate directories, with each directory representing a lesson. Inside each lesson directory, you'll find subdirectories for various topics covered in that lesson. Each topic has its own `[topicname].md` file that delves into the details of that particular topic and src folder that contains the source code for the topic.
+1. **Set up your computer:** [00 · Getting started](00-getting-started/README.md).
+   No time to install anything? Open the course in a ready-made environment:
+   on GitHub press **Code → Codespaces → Create codespace**.
+2. **Get the course:**
 
-```
-C++ Course Repository
-│
-├── 1.Introduction/
-│   ├── 1.HelloWorld/
-│   │   └── src/
-│   │   └── C++INTRO.md
-│   ├── 2.CompilerErrorWarnings/
-│   │   └── src/
-│   │   └── COMPILER_ERRORS_WARNING.md
-│   └── ...
-│
-├── 2.CPPProgrammingStructure/
-│   ├── 1.CPPProgrammingStructre/
-│   │   └── src/
-│   │   └── OVERVIEW.md
-│   ├── 2.IncludePreprocessorDirective/
-│   │   └── src/
-│   │   └── INCLUDE_DIRECTIVE.md
-│   └── ...
-│
-└── ...
-```
-
-## Getting Started
-
-To begin with the course, follow these steps:
-
-1. **Clone the Repository**: 
-   ```bash
+   ```sh
    git clone https://github.com/KamoliddinS/CppUniversityTutorialSeries.git
    ```
 
-2. **Navigate to a Lesson**:
-   ```bash
-   cd [lesson_directory_name]
+3. **Open** [01 · First programs](01-first-programs/README.md) and follow the chapters in order.
+
+## How to use a lesson
+
+1. Read the page. It takes about five minutes.
+2. Build and run the example that sits in the lesson's folder:
+
+   ```sh
+   g++ -std=c++20 -Wall -Wextra hello.cpp -o hello
+   ./hello
    ```
 
-   For example, to navigate to the first lesson:
-   ```bash
-   cd 1.Introduction
+3. Do the "Try it" tasks before you look at the answers.
+4. At the end of a chapter, do its exercises and let the computer check them:
+
+   ```sh
+   cmake -B build
+   ctest --test-dir build -R ex-03-02 --output-on-failure
    ```
 
-3. **Access Topics**:
-   Inside each lesson directory, navigate to the desired topic's directory to access its `[topicname].md` file.
+   The first command is needed only once. The second checks exercise 2 of chapter 03.
 
-   For example, to access the first topic of the first lesson:
-   ```bash
-   cd 1.HelloWorld
-   code . # or open the directory in your preferred editor
-   ```
+## The chapters
 
-## Course Lessons
+### Part 1: Programs that do something
 
-Here's a brief overview of the lessons and the topics they cover:
+| # | Chapter | After it you can |
+|---|---------|------------------|
+| 00 | [Getting started](00-getting-started/README.md) | build a program on your own computer and get the course with Git |
+| 01 | [First programs](01-first-programs/README.md) | write, build and run a program, and find out why it fails |
+| 02 | [Values and types](02-values-and-types/README.md) | store numbers and text and calculate with them |
+| 03 | [Control flow](03-control-flow/README.md) | make decisions, repeat work, and survive wrong input |
+| 04 | [Functions](04-functions/README.md) | split a program into small named pieces |
+| 05 | [Vectors and strings](05-vectors-and-strings/README.md) | work with lists of values and with text |
+| 06 | [Structs and files](06-structs-and-files/README.md) | group data, save it to a file and load it again |
 
-- **[Introduction](./1.Introduction/README.md)**: This lesson provides a basic understanding of C++ programming. It covers topics like setting up a development environment, naming conventions, and running the code.
+### Part 2: Your own types and memory
 
+| # | Chapter | After it you can |
+|---|---------|------------------|
+| 07 | [Classes](07-classes/README.md) | write types that protect their data |
+| 08 | [Operator overloading](08-operator-overloading/README.md) | make your types work with `+`, `==` and `<<` |
+| 09 | [Pointers and memory](09-pointers-and-memory/README.md) | use addresses, and recognise what goes wrong with them |
+| 10 | [Resource management](10-resource-management/README.md) | write classes that clean up, copy and move correctly |
 
-- **[CPP Programming Structure](./2.CPPProgrammingStructure/README.md)**: This lesson covers the fundamental components of a C++ program, such as the `#include` directive, `main()` function,namespaces as well as fundamental types ( to help you stay in sync with tutorials in the lab). 
+### Part 3: Abstraction and the library
 
-- **[CPP Data Storage Basics](./3.C++DataStorageBasics/README.md)**: This lesson covers the basics of data storage in C++, including variables, constants, and literals as well as arrays and vectors.
+| # | Chapter | After it you can |
+|---|---------|------------------|
+| 11 | [Inheritance](11-inheritance/README.md) | build a class on top of another one |
+| 12 | [Polymorphism](12-polymorphism/README.md) | let one call run different code for different objects |
+| 13 | [Exceptions](13-exceptions/README.md) | report errors and recover from them |
+| 14 | [Templates](14-templates/README.md) | write code that works for many types |
+| 15 | [The standard library](15-standard-library/README.md) | pick the right container and let algorithms do the loops |
+| 16 | [Rust for C++ programmers](16-rust-for-cpp-programmers/README.md) | (optional) read Rust and compare its rules with C++ |
 
-- **[Statments Operators](./4.StatementsOperators/README.md)**: This lesson covers the basics of statements and operators in C++, including arithmetic, relational, logical, and bitwise operators as well as conditional statements and loops.
+### More
 
-- **[Control Flow](./5.ControllingProgramFlow/README.md)**: This lesson covers the basics of controlling program flow in C++, including conditional statements, loops, and jump statements.
+- [Projects](projects/README.md): a gradebook program that grows with the course, and a binary converter.
+- [Appendix](appendix/README.md): number systems, build systems, design principles and other side topics.
+- [Glossary](GLOSSARY.md): every key term of the course on one page.
 
-- **[Characters and Strings](./6.CharacterStrings/README.md)**: This lesson covers the basics of characters and strings in C++, including character sets, character handling functions, and string handling functions.
+## Found a mistake?
 
-- **[Functions](./7.Functions/README.md)**: This lesson covers the basics of functions in C++, including function declaration, function definition, function call, and function overloading.
-- **[Pointer References](./8.PointerReferences/README.md)**: This lesson covers the basics of pointers and references in C++, including pointer declaration, pointer arithmetic, pointer and array, pointer and string, and reference declaration.
+Please tell us. Open an issue with the form **Problem in a lesson**, or fix it yourself and
+send a pull request: the lesson [Use Git](00-getting-started/03-use-git/README.md) shows how.
 
-- **[OOP](./9.OOP/README.md)**: This lesson covers the basics of object-oriented programming in C++, including classes, objects, access modifiers, constructors, destructors, and static members.
-- **[Operator Overloading](./10.OpertorOverloading/README.md)**: This lesson covers the basics of operator overloading in C++, including operator overloading, overloading unary operators, overloading binary operators, and overloading relational operators.
+## For teachers
 
+- [Teaching guide](INSTRUCTORS.md): a week-by-week plan, how the checks work, where the solutions are.
+- [How this course is written](CONTRIBUTING.md): the rules every lesson follows.
 
-- **[Inheritance](./11.Inheritance/README.md)**: This lesson covers the basics of inheritance in C++, including inheritance, types of inheritance, and access specifiers.
+## Licence
 
-- **[Polymorphism](./12.Polymorphism/README.md)**: This lesson covers the basics of polymorphism in C++, including polymorphism, function overloading, operator overloading, and function overriding.
-
-- **[Smart Pointers](./13.SmartPointers/README.md)**: This lesson covers the basics of smart pointers in C++, including smart pointers, unique pointers, shared pointers, and weak pointers.
-
-- **[Exception Handling](./14.ExceptionHandling/README.md)**: This lesson covers the basics of exception handling in C++, including exception handling, try block, catch block, and throw keyword.
-
-
-- **[IO Streams](./15.IOStreams/README.md)**: This lesson covers the basics of I/O streams in C++, including I/O streams, standard streams, and file streams.
-
-
->To stay updated on the latest lessons and topics, git pull the repository regularly. 
-> If you did some changes in the repository, you can stash them before pulling the repository and then apply them back after pulling the repository if you need it.
-> ```bash
-> git stash
-> git pull
-> git stash apply # or git stash pop if you want to remove the stash after applying it
-> ```
-
-## Note
-
-This course aims to provide a structured and in-depth understanding of C++ programming. By following along with the lessons and topics, you'll gain both theoretical knowledge and practical experience.
-
-
-> "Experience is the teacher of all things." - Julius Caesar
-
+The course is released under [CC0 1.0](LICENSE): you may copy, change and reuse it freely.

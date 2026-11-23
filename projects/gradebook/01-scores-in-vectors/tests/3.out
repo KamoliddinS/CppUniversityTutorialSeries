@@ -1,0 +1,8 @@
+error: usage: add <name> <score>
+error: unknown command remove
+error: usage: add <name> <score>
+error: unknown command LIST
+error: unknown command Add
+error: unknown student aziz
+Aziz: 85
+students: 1

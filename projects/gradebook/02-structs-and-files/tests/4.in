@@ -1,0 +1,12 @@
+load group-a.txt
+count
+list
+report
+average
+best
+show Jasur
+add-score Dilnoza 80
+add Laziz 77
+report
+average
+best

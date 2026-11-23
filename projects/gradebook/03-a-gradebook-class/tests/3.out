@@ -1,0 +1,15 @@
+error: usage: add <name> <score>
+error: usage: add <name> <score>
+error: usage: add-score <name> <score>
+error: usage: add-score <name> <score>
+error: unknown student Nodira
+error: usage: show <name>
+error: unknown student Nodira
+error: unknown command Report
+error: unknown command remove
+error: usage: save <file>
+error: usage: load <file>
+error: cannot open missing.txt
+error: cannot open no-such-folder/group.txt
+Aziz: 85 95
+students: 1

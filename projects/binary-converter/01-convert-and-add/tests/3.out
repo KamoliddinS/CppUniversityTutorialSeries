@@ -1,0 +1,14 @@
+error: -5 is not a decimal number
+error: 3.5 is not a decimal number
+error: ten is not a decimal number
+error: 1000000000 is too long
+error: 12 is not a binary number
+error: 1O1 is not a binary number
+error: -1 is not a binary number
+error: 10000000000000000000000000000000 is too long
+error: b is not a binary number
+error: x is not a binary number
+error: unknown command convert
+error: unknown command TO-BINARY
+error: unknown command binary
+101

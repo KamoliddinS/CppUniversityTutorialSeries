@@ -1,0 +1,26 @@
+error: duplicate student Malika
+error: the score must be from 0 to 100
+error: the score must be from 0 to 100
+error: duplicate student Nodira
+Jasur: 64 70 58 81 100
+Dilnoza: 100 0
+malika: 88
+Name        Scores  Average
+Aziz             3    84.33
+Malika           2    95.00
+Jasur            5    74.60
+Dilnoza          2    50.00
+malika           1    88.00
+Laziz            1   100.00
+Nodira           1     0.00
+best: Laziz
+average: 70.28
+error: duplicate student Laziz
+students: 7
+Aziz: 85 90 78
+Malika: 92 98
+Jasur: 64 70 58 81 100
+Dilnoza: 100 0
+malika: 88
+Laziz: 100
+Nodira: 0

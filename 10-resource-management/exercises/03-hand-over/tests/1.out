@@ -1,0 +1,3 @@
+a has 0 pixels, b has 4
+b has 0 pixels, c has 4
+The block changed its owner twice and was never copied.

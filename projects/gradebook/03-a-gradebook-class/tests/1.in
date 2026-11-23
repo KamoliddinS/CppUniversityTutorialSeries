@@ -1,0 +1,11 @@
+add Aziz 85
+add Malika 92
+add Aziz 70
+add Jasur 101
+add Jasur -1
+add-score Malika 150
+add-score Aziz 100
+add-score Malika 0
+list
+report
+count

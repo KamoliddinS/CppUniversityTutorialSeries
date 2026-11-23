@@ -1,0 +1,22 @@
+Jasur: 64 70 58 81 77
+Nodira: 73 81 90
+best: Dilnoza
+average: 86.13
+error: usage: add-score <name> <score>
+Name        Scores  Average
+Aziz             3    84.33
+Malika           2    95.00
+Jasur            5    70.00
+Dilnoza          1   100.00
+Nodira           3    81.33
+Laziz            2    47.50
+students: 5
+error: unknown student Laziz
+Name        Scores  Average
+Aziz             4    88.25
+Malika           3    83.67
+Jasur            5    70.00
+Dilnoza          1   100.00
+Nodira           3    81.33
+best: Dilnoza
+average: 84.65

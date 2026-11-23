@@ -1,0 +1,24 @@
+load group-a.txt
+add Nodira 73
+add-score Nodira 81
+add-score Nodira 90
+add-score Jasur 77
+show Jasur
+show Nodira
+best
+average
+save week-7.txt
+add Laziz 45
+add-score Laziz fifty
+add-score Laziz 50
+report
+load week-7.txt
+count
+show Laziz
+add-score Aziz 100
+add-score Malika 61
+report
+best
+average
+quit
+report

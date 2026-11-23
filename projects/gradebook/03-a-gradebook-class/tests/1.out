@@ -1,0 +1,10 @@
+error: duplicate student Aziz
+error: the score must be from 0 to 100
+error: the score must be from 0 to 100
+error: the score must be from 0 to 100
+Aziz: 85 100
+Malika: 92 0
+Name        Scores  Average
+Aziz             2    92.50
+Malika           2    46.00
+students: 2

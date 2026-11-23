@@ -1,0 +1,8 @@
+type Salom
+type dunyo
+show
+undo
+show
+type Toshkent
+redo
+show

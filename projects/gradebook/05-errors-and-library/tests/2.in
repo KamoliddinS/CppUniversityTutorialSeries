@@ -1,0 +1,16 @@
+report
+list
+average
+best
+sort-by name
+sort-by average
+top 3
+below 60
+count
+show Aziz
+add-score Aziz 90
+add-project Aziz 90
+add-exam Aziz 90
+final-grade Aziz
+load missing.txt
+count

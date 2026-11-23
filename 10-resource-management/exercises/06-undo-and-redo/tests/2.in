@@ -1,0 +1,17 @@
+type a
+type b
+type c
+undo
+undo
+show
+redo
+show
+type d
+show
+undo
+undo
+undo
+undo
+show
+redo
+show

@@ -1,0 +1,24 @@
+load group-b.txt
+list
+report
+final-grade Laziz
+final-grade Nodira
+final-grade Jasur
+add-exam Jasur 40
+add-project Jasur 70
+final-grade Jasur
+show Jasur
+save kinds.txt
+add-exam Laziz 100
+final-grade Laziz
+load kinds.txt
+final-grade Laziz
+final-grade Jasur
+add Dilnoza 55
+add-exam Dilnoza 85
+add-project Dilnoza 75
+final-grade Dilnoza
+best
+average
+report
+quit

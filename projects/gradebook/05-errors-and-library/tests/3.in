@@ -1,0 +1,36 @@
+add Aziz 85
+add Malika
+add
+add-score Aziz
+add-score Aziz ten
+add-score Nodira 75
+show
+show Nodira
+
+Report
+remove Aziz
+save
+load
+load missing.txt
+save no-such-folder/group.txt
+add-exam Aziz
+add-exam Aziz ninety
+add-project
+add-project Aziz 101
+add-exam Aziz -1
+final-grade
+final-grade Nodira
+add-homework Aziz 50
+top
+top two
+top 0
+top -3
+below
+below sixty
+sort-by
+sort-by grade
+add-score Aziz 95
+add-exam Aziz 65
+list
+final-grade Aziz
+count

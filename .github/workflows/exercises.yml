@@ -1,0 +1,27 @@
+name: Exercise results
+
+# Shows which exercises pass in this copy of the course, as a table on the run's summary page.
+# It never fails: in the original repository the starter files are unsolved on purpose.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "**/exercises/**"
+      - "projects/**"
+
+permissions:
+  contents: read
+
+jobs:
+  results:
+    name: Check the exercises
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Configure
+        run: cmake -B build
+      - name: Run the checks
+        run: ctest --test-dir build -L exercises --output-junit results.xml --parallel 4 || true
+      - name: Write the summary
+        run: python3 tools/exercise_report.py build/results.xml >> "$GITHUB_STEP_SUMMARY"

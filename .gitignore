@@ -1,45 +1,37 @@
-# Prerequisites
-*.d
-*.DS_Store
-# Compiled Object files
-*.slo
-*.lo
+# Build output
+build/
+cmake-build-*/
+target/
+
+# Exercise solutions live in a separate private repository checked out here.
+/solutions/
+
+# Compiled programs. Students build next to the source file (g++ hello.cpp -o hello),
+# so inside the course folders every file WITHOUT an extension is ignored.
+/[0-9][0-9]-*/**
+!/[0-9][0-9]-*/**/
+!/[0-9][0-9]-*/**/*.*
+/appendix/**
+!/appendix/**/
+!/appendix/**/*.*
+/projects/**
+!/projects/**/
+!/projects/**/*.*
+
+!Makefile
+
+# Other things compilers and debuggers leave behind
+a.out
+*.exe
 *.o
 *.obj
+*.pdb
+*.ilk
+*.dSYM/
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-main
-
-# idea or visual studio code build folder
-.idea
-.vscode
-cmake-build-*
-
-main.dSYM
-
-
-## any directory named build
-build
-DS_Store
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vs/
+*.swp

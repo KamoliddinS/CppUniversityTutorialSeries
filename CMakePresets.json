@@ -1,0 +1,38 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": { "major": 3, "minor": 21, "patch": 0 },
+    "configurePresets": [
+        {
+            "name": "default",
+            "displayName": "Course (debug)",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
+        },
+        {
+            "name": "strict",
+            "displayName": "Warnings are errors",
+            "inherits": "default",
+            "binaryDir": "${sourceDir}/build/strict",
+            "cacheVariables": { "COURSE_WERROR": "ON" }
+        },
+        {
+            "name": "sanitize",
+            "displayName": "With sanitizers (Linux, macOS)",
+            "inherits": "default",
+            "binaryDir": "${sourceDir}/build/sanitize",
+            "cacheVariables": { "COURSE_SANITIZE": "ON" }
+        }
+    ],
+    "buildPresets": [
+        { "name": "default", "configurePreset": "default" }
+    ],
+    "testPresets": [
+        {
+            "name": "examples",
+            "displayName": "Run every lesson example",
+            "configurePreset": "default",
+            "filter": { "include": { "label": "examples" } },
+            "output": { "outputOnFailure": true }
+        }
+    ]
+}

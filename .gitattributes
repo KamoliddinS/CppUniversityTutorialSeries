@@ -1,0 +1,8 @@
+* text=auto
+
+# Test data must have the same line endings on every system.
+*.in   text eol=lf
+*.out  text eol=lf
+*.txt  text eol=lf
+*.csv  text eol=lf
+*.args text eol=lf

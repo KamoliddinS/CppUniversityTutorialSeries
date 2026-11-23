@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug this file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${fileDirname}",
+            "stopAtEntry": false,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "Build this file",
+            "setupCommands": [
+                {
+                    "description": "Show strings and vectors in a readable form",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "windows": {
+                "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "miDebuggerPath": "gdb.exe"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            }
+        }
+    ]
+}

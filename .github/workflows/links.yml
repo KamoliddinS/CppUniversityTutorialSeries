@@ -1,0 +1,23 @@
+name: External links
+
+# Links between pages of the course are checked on every push (see ci.yml).
+# Links to other websites break without anyone touching the course, so they are checked weekly.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: Check links to other websites
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --exclude-path build --exclude-path solutions "**/*.md"
+          fail: true

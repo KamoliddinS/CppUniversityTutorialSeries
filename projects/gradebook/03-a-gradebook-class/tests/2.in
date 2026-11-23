@@ -1,0 +1,9 @@
+report
+list
+average
+best
+count
+show Aziz
+add-score Aziz 90
+load missing.txt
+count

@@ -1,0 +1,7 @@
+open Malika 50000
+open Jasur -300
+deposit 2 30000
+withdraw 1 80000
+withdraw 1 20000
+deposit 3 100
+list

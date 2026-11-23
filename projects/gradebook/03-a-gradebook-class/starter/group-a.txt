@@ -1,0 +1,4 @@
+Aziz 85 90 78
+Malika 92 98
+Jasur 64 70 58 81
+Dilnoza 100

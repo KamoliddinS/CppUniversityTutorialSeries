@@ -1,0 +1,15 @@
+to-binary -5
+to-binary 3.5
+to-binary ten
+to-binary 1000000000
+to-decimal 12
+to-decimal 1O1
+to-decimal -1
+to-decimal 10000000000000000000000000000000
+add 1 b
+add x 1
+convert 5
+TO-BINARY 5
+binary
+
+to-binary 5

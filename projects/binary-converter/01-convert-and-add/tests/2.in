@@ -1,0 +1,11 @@
+to-binary 1
+to-binary 2
+to-binary 7
+to-binary 8
+to-binary 1024
+to-binary 999999999
+to-decimal 0
+to-decimal 1
+to-decimal 10
+to-decimal 100000000
+to-decimal 1111111111111111111111111111111

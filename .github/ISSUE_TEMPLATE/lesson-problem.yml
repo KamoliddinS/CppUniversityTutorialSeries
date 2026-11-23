@@ -1,0 +1,22 @@
+name: Problem in a lesson
+description: Something in a lesson, an example or an exercise is wrong or hard to understand.
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where is it?
+      description: The folder or a link, for example 03-control-flow/05-for-loops
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong or unclear?
+      description: Copy the sentence or the code if you can. Say what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: How would you fix it?
+      description: Optional. You can also open a pull request with the fix.

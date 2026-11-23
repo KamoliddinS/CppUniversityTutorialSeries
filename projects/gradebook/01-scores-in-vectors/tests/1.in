@@ -1,0 +1,13 @@
+list
+add Aziz 85
+add Malika 92
+add Jasur 70
+list
+count
+average
+best
+show Malika
+show Laziz
+add Laziz abc
+remove Jasur
+quit

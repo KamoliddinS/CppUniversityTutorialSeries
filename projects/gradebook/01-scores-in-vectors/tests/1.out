@@ -1,0 +1,11 @@
+error: no students
+Aziz: 85
+Malika: 92
+Jasur: 70
+students: 3
+average: 82.33
+best: Malika
+Malika: 92
+error: unknown student Laziz
+error: usage: add <name> <score>
+error: unknown command remove

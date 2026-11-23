@@ -1,0 +1,14 @@
+to-binary 13
+to-decimal 1101
+add 1101 1101
+to-decimal 11010
+to-binary 26
+add 11010 110
+to-decimal 100000
+to-binary 32
+to-binary 2026
+to-decimal 11111101010
+add 11111101010 1
+to-binary 2027
+quit
+to-binary 99

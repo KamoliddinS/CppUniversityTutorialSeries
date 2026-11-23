@@ -1,0 +1,21 @@
+students: 4
+Aziz: 85 90 78
+Malika: 92 98
+Jasur: 64 70 58 81
+Dilnoza: 100
+Name        Scores  Average
+Aziz             3    84.33
+Malika           2    95.00
+Jasur            4    68.25
+Dilnoza          1   100.00
+average: 86.90
+best: Dilnoza
+Jasur: 64 70 58 81
+Name        Scores  Average
+Aziz             3    84.33
+Malika           2    95.00
+Jasur            4    68.25
+Dilnoza          2    90.00
+Laziz            1    77.00
+average: 82.92
+best: Malika

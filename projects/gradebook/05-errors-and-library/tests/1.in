@@ -1,0 +1,14 @@
+load group-b.txt
+add Aziz 88
+add-exam Aziz 91
+report
+sort-by average
+sort-by name
+top 2
+below 80
+below 50
+load bad-kind.txt
+count
+top zero
+sort-by score
+quit

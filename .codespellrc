@@ -1,0 +1,5 @@
+[codespell]
+# Folders and files that are not prose: build output, test data, the licence text.
+skip = ./build,./solutions,./.git,*.in,*.out,*.csv,Cargo.lock,./LICENSE
+# Words that are correct in this course: Rust's "crate", and the currency "so'm".
+ignore-words-list = crate,som

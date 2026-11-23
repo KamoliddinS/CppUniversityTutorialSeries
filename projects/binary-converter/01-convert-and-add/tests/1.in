@@ -1,0 +1,13 @@
+to-binary 10
+to-binary 0
+to-binary 255
+to-decimal 1010
+to-decimal 11111111
+add 1010 11
+add 1111 1
+to-binary 12a
+to-binary 12345678901
+to-decimal 102
+add 101 2
+to-hex 255
+quit

@@ -1,0 +1,12 @@
+1010
+0
+11111111
+10
+255
+1101
+10000
+error: 12a is not a decimal number
+error: 12345678901 is too long
+error: 102 is not a binary number
+error: 2 is not a binary number
+error: unknown command to-hex

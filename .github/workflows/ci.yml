@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Lessons, outputs, links, spelling
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check the course
+        run: python3 tools/check.py
+      - name: Check spelling
+        # Reports misspelled words without failing the build. Remove the next line
+        # to make it strict once a run is clean.
+        continue-on-error: true
+        run: pipx run codespell
+
+  build:
+    name: Build and run examples (${{ matrix.name }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: Linux GCC, os: ubuntu-24.04, cxx: g++, werror: "ON" }
+          - { name: Linux Clang, os: ubuntu-24.04, cxx: clang++, werror: "OFF" }
+          - { name: macOS, os: macos-latest, cxx: clang++, werror: "OFF" }
+    env:
+      CXX: ${{ matrix.cxx }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Configure
+        run: cmake -B build -DCOURSE_WERROR=${{ matrix.werror }}
+      - name: Build
+        run: cmake --build build --parallel 4
+      - name: Run the examples
+        run: ctest --test-dir build -L examples --output-on-failure --parallel 4
+
+  windows:
+    name: Build and run examples (Windows, MinGW)
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          install: >-
+            mingw-w64-ucrt-x86_64-gcc
+            mingw-w64-ucrt-x86_64-cmake
+            mingw-w64-ucrt-x86_64-ninja
+      - name: Configure
+        run: cmake -B build -G Ninja
+      - name: Build
+        run: cmake --build build
+      - name: Run the examples
+        run: ctest --test-dir build -L examples --output-on-failure

@@ -1,0 +1,6 @@
+open grades
+print grades: 4 pages
+close grades
+open timetable
+close timetable
+error: not enough paper

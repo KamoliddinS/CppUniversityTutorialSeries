@@ -1,0 +1,15 @@
+# Settings for the website version of the course (built with mdBook).
+# Build it with: python3 tools/build_site.py    (the result is in build/site)
+
+[book]
+title = "C++ course"
+language = "en"
+src = "build/site-src"
+
+[build]
+build-dir = "build/site"
+create-missing = false
+
+[output.html]
+git-repository-url = "https://github.com/KamoliddinS/CppUniversityTutorialSeries"
+no-section-label = true

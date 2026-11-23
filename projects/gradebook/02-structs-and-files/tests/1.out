@@ -1,0 +1,12 @@
+Aziz: 85 90 78
+Malika: 92 98
+Name        Scores  Average
+Aziz             3    84.33
+Malika           2    95.00
+average: 89.67
+best: Malika
+students: 3
+students: 2
+error: unknown student Laziz
+error: usage: add-score <name> <score>
+error: cannot open missing.txt

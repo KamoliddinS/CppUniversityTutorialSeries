@@ -1,0 +1,21 @@
+load group-a.txt
+add Malika 88
+add malika 88
+add-score Jasur 100
+add-score Jasur 101
+add-score Jasur -5
+add-score Dilnoza 0
+add Laziz 100
+add Nodira 0
+add Nodira 50
+show Jasur
+show Dilnoza
+show malika
+report
+best
+average
+save checked.txt
+add Laziz 1
+load checked.txt
+count
+list

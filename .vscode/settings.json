@@ -1,0 +1,8 @@
+{
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.compilerArgs": ["-Wall", "-Wextra"],
+    "cmake.configureOnOpen": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "files.insertFinalNewline": true
+}

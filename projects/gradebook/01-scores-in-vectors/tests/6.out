@@ -1,0 +1,17 @@
+students: 3
+average: 84.67
+best: Malika
+Aziz: 78
+Malika: 91
+Dilnoza: 85
+Jasur: 64
+Laziz: 91
+Dilnoza: 85
+error: unknown student Nodira
+best: Malika
+average: 81.80
+error: usage: add <name> <score>
+error: unknown command drop
+students: 5
+Nodira: 57
+average: 77.67

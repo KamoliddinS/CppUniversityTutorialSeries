@@ -1,0 +1,15 @@
+add Aziz 80
+add-score Aziz 90
+add-project Aziz 70
+add-exam Aziz 60
+list
+report
+final-grade Aziz
+add Malika 100
+add-exam Malika 50
+final-grade Malika
+final-grade Jasur
+add-exam Jasur 80
+add-exam Aziz 120
+add-project Malika
+quit

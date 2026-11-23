@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build this file",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++20", "-Wall", "-Wextra", "-g",
+                "${file}",
+                "-o", "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": ["$gcc"],
+            "presentation": { "reveal": "silent", "clear": true }
+        },
+        {
+            "label": "Build and run this file",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "options": { "cwd": "${fileDirname}" },
+            "dependsOn": "Build this file",
+            "group": { "kind": "test", "isDefault": true },
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "focus": true, "clear": true }
+        },
+        {
+            "label": "Build this folder as one program",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++20", "-Wall", "-Wextra", "-g",
+                "${fileDirname}/*.cpp",
+                "-o", "${fileDirname}/program"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "presentation": { "reveal": "silent", "clear": true }
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+add Aziz 85
+add-exam Aziz 95
+add Malika 70
+load bad-kind.txt
+list
+load bad-score.txt
+count
+load bad-name.txt
+report
+load missing.txt
+final-grade Aziz
+load group-b.txt
+load bad-name.txt
+list
+add-score Jasur 50
+show Jasur
+show Aziz
+quit

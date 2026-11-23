@@ -1,0 +1,17 @@
+error: bad data in bad-kind.txt
+Aziz: 85 95
+Malika: 70
+error: bad data in bad-score.txt
+students: 2
+error: bad data in bad-name.txt
+Name        Scores  Average
+Aziz             2    90.00
+Malika           1    70.00
+error: cannot open missing.txt
+Aziz: 92.50
+error: bad data in bad-name.txt
+Laziz: 70 80 90 60
+Nodira: 95 85 75
+Jasur: 100
+Jasur: 100 50
+error: unknown student Aziz

@@ -1,0 +1,15 @@
+add Nodira 88
+add-score Nodira 93
+add Laziz 59
+save spring.txt
+add-score Laziz 71
+add Jasur 80
+list
+load spring.txt
+list
+load group-a.txt
+count
+load spring.txt
+report
+load missing.txt
+count

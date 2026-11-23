@@ -1,0 +1,8 @@
+seat 2: Aziz
+error: seat 2 is taken
+error: no such seat
+seat 2: Aziz
+seat 3: free
+error: no such seat
+seat 3: Malika
+seat 3: Malika

@@ -1,0 +1,18 @@
+add Aziz 85
+add-score Aziz 90
+add-score Aziz 78
+add Malika 92
+add-score Malika 98
+list
+report
+average
+best
+save autumn.txt
+add Jasur 64
+count
+load autumn.txt
+count
+add-score Laziz 70
+add-score Aziz
+load missing.txt
+quit

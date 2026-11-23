@@ -1,0 +1,12 @@
+open Aziz 1000
+open Nodira 2000
+open Laziz 3000
+open Dilnoza 4000
+open Malika 5000
+withdraw 4 4000
+withdraw 4 1
+deposit 5 -50
+withdraw 0 10
+list
+deposit 1 500
+list

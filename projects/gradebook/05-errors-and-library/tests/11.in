@@ -1,0 +1,23 @@
+add Dilnoza 90
+add Aziz 80
+add Malika 90
+add Jasur 70
+add Nodira 80
+add Laziz 60
+sort-by average
+top 1
+best
+top 3
+top 10
+below 80
+below 80.5
+below 100
+sort-by name
+add-exam Laziz 100
+add-score Jasur 95
+sort-by average
+top 2
+below 82.5
+show Laziz
+final-grade Laziz
+report

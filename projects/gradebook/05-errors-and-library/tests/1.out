@@ -1,0 +1,25 @@
+Name        Scores  Average
+Laziz            4    75.00
+Nodira           3    85.00
+Jasur            1   100.00
+Aziz             2    89.50
+Name        Scores  Average
+Jasur            1   100.00
+Aziz             2    89.50
+Nodira           3    85.00
+Laziz            4    75.00
+Name        Scores  Average
+Aziz             2    89.50
+Jasur            1   100.00
+Laziz            4    75.00
+Nodira           3    85.00
+Name        Scores  Average
+Jasur            1   100.00
+Aziz             2    89.50
+Name        Scores  Average
+Laziz            4    75.00
+Name        Scores  Average
+error: bad data in bad-kind.txt
+students: 4
+error: usage: top <n>
+error: usage: sort-by <key>

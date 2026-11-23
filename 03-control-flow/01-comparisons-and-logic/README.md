@@ -85,32 +85,31 @@ so the division by zero never happens. Put the safe test on the left.
 
 int main() {
     int x = 50;
-    bool inRange = 1 < x < 10;
-    bool isFive = x = 5;
-    std::cout << std::boolalpha << inRange << ' ' << isFive << '\n';
+    bool isFive = x = 5;        // meant: x == 5
+    std::cout << std::boolalpha << isFive << ' ' << x << '\n';
 }
 ```
 
 <!-- errors: traps_bug -->
 ```text
 traps_bug.cpp: In function ‘int main()’:
-traps_bug.cpp:5:26: warning: comparison of constant ‘10’ with boolean expression is always true [-Wbool-compare]
-    5 |     bool inRange = 1 < x < 10;
-      |                    ~~~~~~^~~~
-traps_bug.cpp:5:22: warning: comparisons like ‘X<=Y<=Z’ do not have their mathematical meaning [-Wparentheses]
-    5 |     bool inRange = 1 < x < 10;
-      |                    ~~^~~
-traps_bug.cpp:6:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-    6 |     bool isFive = x = 5;
+traps_bug.cpp:5:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    5 |     bool isFive = x = 5;        // meant: x == 5
       |                   ~~^~~
 ```
 
-The program is built and prints `true true`. Both answers are wrong.
+It prints `true 5`.
+
+```cpp
+bool inRange = 1 < x < 10;      // x is 50
+```
+
+g++ warns and makes `inRange` `true`. Newer clang, the compiler on macOS, refuses it.
 
 | You wrote | What C++ does | Write |
 |-----------|---------------|-------|
-| `1 < x < 10` | means `(1 < x) < 10`. The result of `1 < x` counts as 0 or 1, and that is always less than 10. | `1 < x && x < 10` |
-| `x = 5` | stores 5 in `x`. Every number except 0 counts as `true`, so `if (x = 5)` is always true. | `x == 5` |
+| `1 < x < 10` | means `(1 < x) < 10`: `1 < x` gives 0 or 1, always less than 10. | `1 < x && x < 10` |
+| `x = 5` | stores 5 in `x`; any number except 0 counts as `true`, so `if (x = 5)` is always true. | `x == 5` |
 
 The third trap gives no warning: `==` between two `double` values.
 
